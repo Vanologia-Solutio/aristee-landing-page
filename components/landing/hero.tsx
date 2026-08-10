@@ -2,6 +2,7 @@ import heroBackground from '@/assets/images/bg-hero.png'
 import { Calendar, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
 import { Button } from '../ui/button'
+import { AccentLabel } from '../ui/label'
 
 export default function Hero() {
   return (
@@ -16,13 +17,13 @@ export default function Hero() {
       </div>
       <div className='relative mx-auto max-w-6xl z-10'>
         <div className='space-y-6 mb-8'>
-          <p className='text-sm uppercase font-light tracking-wide'>
-            Klinik Kecantikan Aristée
-          </p>
-          <h1 className='max-w-md font-heading text-5xl leading-tight'>
-            Perawatan Kulit yang Nyaman, Personal, dan Terpercaya
+          <AccentLabel>Klinik Kecantikan Aristée</AccentLabel>
+          <h1 className='max-w-md font-medium font-heading text-5xl leading-tight'>
+            Perawatan Kulit yang <span className='text-accent'>Nyaman</span>,{' '}
+            <span className='text-accent'>Personal</span>, dan{' '}
+            <span className='text-accent'>Terpercaya</span>
           </h1>
-          <p className='max-w-sm'>
+          <p className='max-w-sm text-muted-foreground leading-relaxed'>
             Kami hadir untuk memberikan pengalaman perawatan kulit yang aman,
             nyaman dan efektif bersama dokter profesional.
           </p>

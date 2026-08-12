@@ -1,9 +1,9 @@
-import consultationRoom from '@/assets/images/treatments/consultation-room.webp'
-import medicineBox from '@/assets/images/treatments/medicine-box.webp'
-import receptionist from '@/assets/images/treatments/recepsionist.webp'
-import treatmentRoom from '@/assets/images/treatments/treatment-room.webp'
-import waitingRoom from '@/assets/images/treatments/waiting-room.webp'
-import wastafel from '@/assets/images/treatments/wastafel.webp'
+import consultationRoom from '@/assets/images/consultation-room.webp'
+import medicineBox from '@/assets/images/medicine-box.webp'
+import receptionist from '@/assets/images/recepsionist.webp'
+import treatmentRoom from '@/assets/images/treatment-room.webp'
+import waitingRoom from '@/assets/images/waiting-room.webp'
+import wastafel from '@/assets/images/wastafel.webp'
 import { BUSINESS_NAME } from '@/lib/constants'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 import Image from 'next/image'
@@ -18,11 +18,11 @@ const CHECKLISTS = [
 
 export default function Gallery() {
   return (
-    <section id='galeri' className='py-24'>
-      <div className='mx-auto max-w-6xl px-4 grid grid-cols-5 items-center justify-center gap-12'>
-        <div className='col-span-2 space-y-4 mb-8'>
+    <section id='galeri' className='py-16 md:py-24 bg-white'>
+      <div className='mx-auto max-w-6xl px-4 grid grid-cols-1 items-center justify-center gap-8 md:grid-cols-5 md:gap-12'>
+        <div className='col-span-1 space-y-4 mb-8 md:col-span-2'>
           <AccentLabel>Galeri Kami</AccentLabel>
-          <h2 className='font-heading font-medium text-4xl leading-tight'>
+          <h2 className='font-heading font-medium text-3xl md:text-4xl leading-tight'>
             Kenyamanan di
             <br />
             <span className='text-accent'>Setiap Ruang</span>
@@ -41,14 +41,14 @@ export default function Gallery() {
               </li>
             ))}
           </ul>
-          <Button size='lg'>
+          <Button size='xl' variant='accent'>
             Selengkapnya Tentang Kami
             <ArrowRight />
           </Button>
         </div>
-        <div className='col-span-3 space-y-4'>
-          <div className='grid grid-cols-5 gap-4'>
-            <div className='group col-span-3 relative h-72 rounded-4xl overflow-hidden hover:rotate-2 transition-transform duration-500'>
+        <div className='col-span-1 space-y-4 md:col-span-3'>
+          <div className='grid grid-cols-2 gap-3 md:grid-cols-5 md:gap-4'>
+            <div className='group col-span-1 relative h-40 rounded-4xl overflow-hidden hover:rotate-2 transition-transform duration-500 md:col-span-3 md:h-72'>
               <Image
                 src={receptionist}
                 alt='Resepsionis'
@@ -58,7 +58,7 @@ export default function Gallery() {
                 className='object-cover object-center transition-transform duration-500 group-hover:scale-105'
               />
             </div>
-            <div className='group col-span-2 relative h-72 rounded-4xl overflow-hidden hover:-rotate-1 transition-transform duration-500'>
+            <div className='group col-span-1 relative h-40 rounded-4xl overflow-hidden hover:-rotate-1 transition-transform duration-500 md:col-span-2 md:h-72'>
               <Image
                 src={waitingRoom}
                 alt='Ruang Tunggu'
@@ -69,8 +69,8 @@ export default function Gallery() {
               />
             </div>
           </div>
-          <div className='grid grid-cols-4 gap-4'>
-            <div className='group relative h-48 rounded-4xl overflow-hidden hover:rotate-1 transition-transform duration-500'>
+          <div className='grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4'>
+            <div className='group relative h-32 rounded-4xl overflow-hidden hover:rotate-1 transition-transform duration-500 md:h-48'>
               <Image
                 src={consultationRoom}
                 alt='Ruang Konsultasi'
@@ -80,7 +80,7 @@ export default function Gallery() {
                 className='object-cover object-center transition-transform duration-500 group-hover:scale-105'
               />
             </div>
-            <div className='group relative h-48 rounded-4xl overflow-hidden hover:-rotate-1 transition-transform duration-500'>
+            <div className='group relative h-32 rounded-4xl overflow-hidden hover:-rotate-1 transition-transform duration-500 md:h-48'>
               <Image
                 src={treatmentRoom}
                 alt='Ruang Perawatan'
@@ -90,7 +90,7 @@ export default function Gallery() {
                 className='object-cover object-center transition-transform duration-500 group-hover:scale-105'
               />
             </div>
-            <div className='group relative h-48 rounded-4xl overflow-hidden hover:rotate-2 transition-transform duration-500'>
+            <div className='group relative h-32 rounded-4xl overflow-hidden hover:rotate-2 transition-transform duration-500 md:h-48'>
               <Image
                 src={medicineBox}
                 alt='Kotak Obat'
@@ -100,7 +100,7 @@ export default function Gallery() {
                 className='object-cover object-center transition-transform duration-500 group-hover:scale-105'
               />
             </div>
-            <div className='group relative h-48 rounded-4xl overflow-hidden hover:-rotate-1 transition-transform duration-500'>
+            <div className='group relative h-32 rounded-4xl overflow-hidden hover:-rotate-1 transition-transform duration-500 md:h-48'>
               <Image
                 src={wastafel}
                 alt='Wastafel'

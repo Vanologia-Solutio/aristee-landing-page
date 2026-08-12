@@ -40,54 +40,56 @@ const TREATMENTS = [
 
 export default function Treatments() {
   return (
-    <section id='perawatan' className='mx-auto w-full max-w-6xl px-4 py-24'>
-      <div className='flex items-end justify-between mb-8'>
-        <div className='space-y-4'>
-          <AccentLabel>Perawatan Unggulan</AccentLabel>
-          <h2 className='font-heading font-medium text-3xl leading-tight'>
-            Program Perawatan yang Efektif
-          </h2>
+    <section id='perawatan' className='py-16 md:py-24 bg-beige'>
+      <div className='mx-auto max-w-6xl px-4'>
+        <div className='flex flex-col items-start gap-4 mb-8 md:flex-row md:items-end md:justify-between'>
+          <div className='space-y-4'>
+            <AccentLabel>Perawatan Unggulan</AccentLabel>
+            <h2 className='font-heading font-medium text-3xl leading-tight'>
+              Program Perawatan yang Efektif
+            </h2>
+          </div>
+          <Button size='sm' variant='link' className='group p-0 text-accent'>
+            Lihat Semua Perawatan
+            <ArrowRight className='group-hover:translate-x-1 duration-250' />
+          </Button>
         </div>
-        <Button size='sm' variant='link' className='group p-0 text-accent'>
-          Lihat Semua Perawatan
-          <ArrowRight className='group-hover:translate-x-1 duration-250' />
-        </Button>
-      </div>
-      <div className='grid gap-6 grid-cols-4'>
-        {TREATMENTS.map(treatment => (
-          <Card
-            id={treatment.id}
-            key={treatment.id}
-            className='group relative overflow-hidden pt-0'
-          >
-            <div className='relative aspect-4/3 w-full overflow-hidden'>
-              <Image
-                src={treatment.image}
-                alt={treatment.title}
-                fill
-                sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                priority
-                className='object-cover object-center transition-transform duration-500 group-hover:scale-105'
-              />
-            </div>
-            <CardHeader>
-              <CardTitle className='font-sans'>{treatment.title}</CardTitle>
-              <CardDescription className='line-clamp-2 text-muted-foreground'>
-                {treatment.desc}
-              </CardDescription>
-            </CardHeader>
-            <CardFooter>
-              <Button
-                size='sm'
-                variant='link'
-                className='group p-0 text-accent'
-              >
-                Selengkapnya
-                <ArrowRight className='group-hover:translate-x-1 duration-250' />
-              </Button>
-            </CardFooter>
-          </Card>
-        ))}
+        <div className='grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-4'>
+          {TREATMENTS.map(treatment => (
+            <Card
+              id={treatment.id}
+              key={treatment.id}
+              className='group relative overflow-hidden pt-0'
+            >
+              <div className='relative aspect-4/3 w-full overflow-hidden'>
+                <Image
+                  src={treatment.image}
+                  alt={treatment.title}
+                  fill
+                  sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                  priority
+                  className='object-cover object-center transition-transform duration-500 group-hover:scale-105'
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className='font-sans'>{treatment.title}</CardTitle>
+                <CardDescription className='line-clamp-2 text-muted-foreground'>
+                  {treatment.desc}
+                </CardDescription>
+              </CardHeader>
+              <CardFooter>
+                <Button
+                  size='sm'
+                  variant='link'
+                  className='group p-0 text-accent'
+                >
+                  Selengkapnya
+                  <ArrowRight className='group-hover:translate-x-1 duration-250' />
+                </Button>
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
       </div>
     </section>
   )

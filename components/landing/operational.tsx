@@ -12,11 +12,14 @@ import { Separator } from '../ui/separator'
 
 export default function Operational() {
   return (
-    <section id='operasional' className='py-24'>
+    <section
+      id='operasional'
+      className='py-16 md:py-24 bg-linear-to-b from-white via-white/50 to-beige'
+    >
       <div className='mx-auto max-w-6xl px-4 space-y-10'>
         <div className='flex flex-col items-center gap-2.5 text-center'>
           <AccentLabel>Kunjungi Kami</AccentLabel>
-          <h3 className='font-heading font-medium text-4xl leading-tight'>
+          <h3 className='font-heading font-medium text-3xl md:text-4xl leading-tight'>
             Lokasi & Jam Operasional
           </h3>
           <p className='text-muted-foreground leading-relaxed max-w-md'>
@@ -24,8 +27,8 @@ export default function Operational() {
             nyaman dan profesional.
           </p>
         </div>
-        <div className='grid grid-cols-5 items-center justify-center gap-12'>
-          <div className='col-span-2 space-y-6'>
+        <div className='grid grid-cols-1 items-center justify-center gap-10 md:grid-cols-5 md:gap-12'>
+          <div className='col-span-1 space-y-6 md:col-span-2'>
             <div className='flex items-start gap-4'>
               <span className='size-12 aspect-square bg-accent/10 rounded-full inline-flex items-center justify-center'>
                 <MapPin className='text-accent' />
@@ -41,7 +44,7 @@ export default function Operational() {
                 </p>
               </div>
             </div>
-            <Separator />
+            <Separator className='hidden md:block' />
             <div className='flex items-start gap-4'>
               <span className='size-12 aspect-square bg-accent/10 rounded-full inline-flex items-center justify-center'>
                 <Calendar className='text-accent' />
@@ -64,26 +67,26 @@ export default function Operational() {
                 </div>
               </div>
             </div>
-            <div className='grid grid-cols-2 gap-4'>
+            <div className='grid grid-cols-1 gap-3 sm:grid-cols-2'>
               <Link
                 href={MAP_DIRECTIONS_URL}
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                <Button size='lg' className='w-full'>
+                <Button size='xl' className='w-full'>
                   Temukan Lokasi
                   <Map />
                 </Button>
               </Link>
               <Link href={`tel:${WHATSAPP_NUMBER}`}>
-                <Button size='lg' className='w-full' variant='outline'>
+                <Button size='xl' className='w-full' variant='accent-outline'>
                   Hubungi Kami
                   <Phone />
                 </Button>
               </Link>
             </div>
           </div>
-          <div className='col-span-3 relative overflow-hidden min-h-96'>
+          <div className='col-span-1 relative overflow-hidden min-h-72 md:col-span-3 md:min-h-96'>
             <iframe
               src={MAP_EMBED_URL}
               className='absolute inset-0 size-full object-cover'

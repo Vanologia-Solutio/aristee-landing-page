@@ -8,6 +8,7 @@
   --color-background: var(--background);
   --color-secondary-background: var(--secondary-background);
   --color-foreground: var(--foreground);
+  --color-beige: var(--beige);
   --font-sans: var(--font-sans);
   --font-heading: var(--font-heading);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -50,11 +51,12 @@
 
 :root {
   color-scheme: light;
-  --background: #f7eee4;
+  --background: #ffffff;
   --foreground: #1b3c73;
-  --card: #f7eee4;
+  --beige: #f7eee4;
+  --card: #ffffff;
   --card-foreground: #1b3c73;
-  --popover: #f7eee4;
+  --popover: #ffffff;
   --popover-foreground: #1b3c73;
   --primary: #1b3c73;
   --primary-foreground: #eaeaea;
@@ -63,7 +65,7 @@
   --muted: #eaeaea;
   --muted-foreground: #667085;
   --accent: #f4538a;
-  --accent-foreground: #f7eee4;
+  --accent-foreground: #ffffff;
   --destructive: #c94d69;
   --border: #f1dfe3;
   --input: #f1dfe3;

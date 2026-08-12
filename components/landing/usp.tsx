@@ -1,5 +1,5 @@
-import leaf1 from '@/assets/images/leaf-1.png'
-import leaf2 from '@/assets/images/leaf-2.png'
+import leaf1 from '@/assets/images/leaf-1.webp'
+import leaf2 from '@/assets/images/leaf-2.webp'
 import { Cpu, FlaskConical, Stethoscope, Target } from 'lucide-react'
 import Image from 'next/image'
 
@@ -33,7 +33,7 @@ const SELLING_POINTS = [
 export default function USP() {
   return (
     <section id='usp' className='relative py-12 bg-primary overflow-hidden'>
-      <div className='absolute z-10 -bottom-14 -left-8 opacity-25'>
+      <div className='absolute z-10 -bottom-14 -left-8 opacity-15'>
         <Image
           src={leaf2}
           alt='Leaf'
@@ -42,7 +42,7 @@ export default function USP() {
           className='object-cover object-center'
         />
       </div>
-      <div className='absolute z-10 top-4 -right-16 -rotate-28 opacity-25'>
+      <div className='absolute z-10 top-4 -right-16 -rotate-28 opacity-15'>
         <Image
           src={leaf1}
           alt='Leaf'
@@ -56,7 +56,7 @@ export default function USP() {
         {SELLING_POINTS.map((point, index) => (
           <div
             key={index}
-            className='flex flex-col text-center items-center justify-center gap-2.5 px-12'
+            className='flex flex-col text-center items-center justify-center gap-2.5 px-4 md:px-12'
           >
             <point.icon className='text-accent size-9' />
             <h3 className='font-medium text-xl text-background'>

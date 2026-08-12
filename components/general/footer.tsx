@@ -1,5 +1,5 @@
-import leaf4 from '@/assets/images/leaf-4.png'
-import leaf5 from '@/assets/images/leaf-5.png'
+import leaf4 from '@/assets/images/leaf-4.webp'
+import leaf5 from '@/assets/images/leaf-5.webp'
 import logo from '@/assets/images/logo-white.webp'
 import {
   BUSINESS_NAME,
@@ -15,27 +15,27 @@ import { Button } from '../ui/button'
 export default function Footer() {
   return (
     <footer className='relative bg-primary overflow-hidden'>
-      <div className='absolute z-10 -bottom-7 -left-7 opacity-25'>
+      <div className='absolute z-10 -bottom-7 -left-7 opacity-15'>
         <Image
           src={leaf4}
           alt='Leaf'
           width={184}
           height={184}
-          className='object-cover object-center'
+          className='object-cover object-center size-full'
         />
       </div>
-      <div className='absolute z-10 top-7 -right-12 -rotate-30 opacity-25'>
+      <div className='absolute z-10 top-7 -right-12 -rotate-30 opacity-15'>
         <Image
           src={leaf5}
           alt='Leaf'
           width={144}
           height={144}
-          className='object-cover object-center'
+          className='object-cover object-center size-full'
         />
       </div>
 
-      <div className='max-w-6xl px-4 mx-auto grid grid-cols-11 gap-12 py-10'>
-        <div className='col-span-4 space-y-5'>
+      <div className='max-w-6xl px-4 mx-auto grid grid-cols-2 gap-x-6 gap-y-8 py-10 md:grid-cols-11 md:gap-12'>
+        <div className='col-span-2 space-y-5 md:col-span-4'>
           <Image
             src={logo}
             alt="Arist'ee Beauty Clinic"
@@ -60,7 +60,7 @@ export default function Footer() {
             </Button>
           </div>
         </div>
-        <div className='col-span-2'>
+        <div className='col-span-1 md:col-span-2'>
           <h4 className='font-medium mb-3.5 text-background'>Navigasi</h4>
           <ul className='text-xs space-y-2.5 text-background/65'>
             <li>
@@ -83,7 +83,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div className='col-span-2'>
+        <div className='col-span-1 md:col-span-2'>
           <h4 className='font-medium mb-3.5 text-background'>Informasi</h4>
           <ul className='text-xs space-y-2.5 text-background/65'>
             <li>
@@ -97,7 +97,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div className='col-span-3'>
+        <div className='col-span-2 md:col-span-3'>
           <h4 className='font-medium mb-3.5 text-background'>Kontak Kami</h4>
           <ul className='text-xs space-y-2.5 text-background/65'>
             <li className='flex gap-1.5'>
@@ -128,7 +128,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <p className='text-sm text-background/65 text-center pb-4'>
+      <p className='text-xs sm:text-sm text-background/65 text-center pb-4'>
         &copy; {new Date().getFullYear()} {BUSINESS_NAME}. All rights reserved.
       </p>
     </footer>

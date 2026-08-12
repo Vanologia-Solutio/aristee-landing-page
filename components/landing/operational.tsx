@@ -1,3 +1,5 @@
+'use client'
+
 import {
   BUSINESS_NAME,
   MAP_DIRECTIONS_URL,
@@ -8,6 +10,7 @@ import { Calendar, Map, MapPin, Phone } from 'lucide-react'
 import Link from 'next/link'
 import { Button } from '../ui/button'
 import { AccentLabel } from '../ui/label'
+import { FadeIn, FadeInItem, FadeInStagger } from '../ui/motion'
 import { Separator } from '../ui/separator'
 
 export default function Operational() {
@@ -17,7 +20,7 @@ export default function Operational() {
       className='py-16 md:py-24 bg-linear-to-b from-white via-white/50 to-beige'
     >
       <div className='mx-auto max-w-6xl px-4 space-y-10'>
-        <div className='flex flex-col items-center gap-2.5 text-center'>
+        <FadeIn className='flex flex-col items-center gap-2.5 text-center'>
           <AccentLabel>Kunjungi Kami</AccentLabel>
           <h3 className='font-heading font-medium text-3xl md:text-4xl leading-tight'>
             Lokasi & Jam Operasional
@@ -26,10 +29,10 @@ export default function Operational() {
             Kami siap menyambut Anda dengan pelayanan terbaik dalam suasana yang
             nyaman dan profesional.
           </p>
-        </div>
+        </FadeIn>
         <div className='grid grid-cols-1 items-center justify-center gap-10 md:grid-cols-5 md:gap-12'>
-          <div className='col-span-1 space-y-6 md:col-span-2'>
-            <div className='flex items-start gap-4'>
+          <FadeInStagger className='col-span-1 space-y-6 md:col-span-2'>
+            <FadeInItem className='flex items-start gap-4'>
               <span className='size-12 aspect-square bg-accent/10 rounded-full inline-flex items-center justify-center'>
                 <MapPin className='text-accent' />
               </span>
@@ -43,9 +46,9 @@ export default function Operational() {
                   Kabupaten Pringsewu, Lampung 35373
                 </p>
               </div>
-            </div>
+            </FadeInItem>
             <Separator className='hidden md:block' />
-            <div className='flex items-start gap-4'>
+            <FadeInItem className='flex items-start gap-4'>
               <span className='size-12 aspect-square bg-accent/10 rounded-full inline-flex items-center justify-center'>
                 <Calendar className='text-accent' />
               </span>
@@ -66,8 +69,8 @@ export default function Operational() {
                   </h4>
                 </div>
               </div>
-            </div>
-            <div className='grid grid-cols-1 gap-3 sm:grid-cols-2'>
+            </FadeInItem>
+            <FadeInItem className='grid grid-cols-1 gap-3 sm:grid-cols-2'>
               <Link
                 href={MAP_DIRECTIONS_URL}
                 target='_blank'
@@ -84,9 +87,12 @@ export default function Operational() {
                   <Phone />
                 </Button>
               </Link>
-            </div>
-          </div>
-          <div className='col-span-1 relative overflow-hidden min-h-72 md:col-span-3 md:min-h-96'>
+            </FadeInItem>
+          </FadeInStagger>
+          <FadeIn
+            delay={0.15}
+            className='col-span-1 relative overflow-hidden min-h-72 md:col-span-3 md:min-h-96'
+          >
             <iframe
               src={MAP_EMBED_URL}
               className='absolute inset-0 size-full object-cover'
@@ -96,7 +102,7 @@ export default function Operational() {
               referrerPolicy='no-referrer-when-downgrade'
               title={BUSINESS_NAME}
             />
-          </div>
+          </FadeIn>
         </div>
       </div>
     </section>

@@ -1,3 +1,5 @@
+'use client'
+
 import leaf4 from '@/assets/images/leaf-4.webp'
 import leaf5 from '@/assets/images/leaf-5.webp'
 import logo from '@/assets/images/logo-white.webp'
@@ -11,6 +13,7 @@ import { Contact, Mail, MapPin, Phone } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '../ui/button'
+import { FadeInItem, FadeInStagger } from '../ui/motion'
 
 export default function Footer() {
   return (
@@ -34,8 +37,8 @@ export default function Footer() {
         />
       </div>
 
-      <div className='max-w-6xl px-4 mx-auto grid grid-cols-2 gap-x-6 gap-y-8 py-10 md:grid-cols-11 md:gap-12'>
-        <div className='col-span-2 space-y-5 md:col-span-4'>
+      <FadeInStagger className='max-w-6xl px-4 mx-auto grid grid-cols-2 gap-x-6 gap-y-8 py-10 md:grid-cols-11 md:gap-12'>
+        <FadeInItem className='col-span-2 space-y-5 md:col-span-4'>
           <Image
             src={logo}
             alt="Arist'ee Beauty Clinic"
@@ -59,8 +62,8 @@ export default function Footer() {
               <Contact />
             </Button>
           </div>
-        </div>
-        <div className='col-span-1 md:col-span-2'>
+        </FadeInItem>
+        <FadeInItem className='col-span-1 md:col-span-2'>
           <h4 className='font-medium mb-3.5 text-background'>Navigasi</h4>
           <ul className='text-xs space-y-2.5 text-background/65'>
             <li>
@@ -82,8 +85,8 @@ export default function Footer() {
               <Link href='#cta'>Kontak</Link>
             </li>
           </ul>
-        </div>
-        <div className='col-span-1 md:col-span-2'>
+        </FadeInItem>
+        <FadeInItem className='col-span-1 md:col-span-2'>
           <h4 className='font-medium mb-3.5 text-background'>Informasi</h4>
           <ul className='text-xs space-y-2.5 text-background/65'>
             <li>
@@ -96,8 +99,8 @@ export default function Footer() {
               <Link href='/kebijakan-privasi'>Kebijakan Privasi</Link>
             </li>
           </ul>
-        </div>
-        <div className='col-span-2 md:col-span-3'>
+        </FadeInItem>
+        <FadeInItem className='col-span-2 md:col-span-3'>
           <h4 className='font-medium mb-3.5 text-background'>Kontak Kami</h4>
           <ul className='text-xs space-y-2.5 text-background/65'>
             <li className='flex gap-1.5'>
@@ -125,8 +128,8 @@ export default function Footer() {
               <Link href={`mailto:${SUPPORT_EMAIL}`}>info@aristee.com</Link>
             </li>
           </ul>
-        </div>
-      </div>
+        </FadeInItem>
+      </FadeInStagger>
 
       <p className='text-xs sm:text-sm text-background/65 text-center pb-4'>
         &copy; {new Date().getFullYear()} {BUSINESS_NAME}. All rights reserved.

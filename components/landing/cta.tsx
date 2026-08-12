@@ -1,9 +1,12 @@
+'use client'
+
 import ctaBackground from '@/assets/images/cta.webp'
 import { WHATSAPP_NUMBER, WHATSAPP_URL } from '@/lib/constants'
 import { Calendar, MessageCircle } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '../ui/button'
+import { FadeInItem, FadeInStagger } from '../ui/motion'
 
 export default function CTA() {
   return (
@@ -17,17 +20,21 @@ export default function CTA() {
 
       <div className='absolute inset-0 bg-linear-to-b from-beige to-transparent' />
 
-      <div className='relative z-10 mx-auto max-w-6xl px-4 flex flex-col items-center gap-6'>
-        <h1 className='font-heading text-3xl md:text-5xl text-center font-medium leading-tight'>
-          Konsultasikan
-          <br />
-          <span className='text-accent'>Keluhan Kulit Anda</span>
-        </h1>
-        <p className='text-base md:text-lg max-w-md mx-auto text-center text-muted-foreground leading-relaxed'>
-          Tim profesional kami siap membantu Anda menemukan solusi terbaik untuk
-          kulit sehat dan percaya diri.
-        </p>
-        <div className='flex flex-col w-full gap-3 md:flex-row md:w-auto md:items-center'>
+      <FadeInStagger className='relative z-10 mx-auto max-w-6xl px-4 flex flex-col items-center gap-6'>
+        <FadeInItem>
+          <h1 className='font-heading text-3xl md:text-5xl text-center font-medium leading-tight'>
+            Konsultasikan
+            <br />
+            <span className='text-accent'>Keluhan Kulit Anda</span>
+          </h1>
+        </FadeInItem>
+        <FadeInItem>
+          <p className='text-base md:text-lg max-w-md mx-auto text-center text-muted-foreground leading-relaxed'>
+            Tim profesional kami siap membantu Anda menemukan solusi terbaik
+            untuk kulit sehat dan percaya diri.
+          </p>
+        </FadeInItem>
+        <FadeInItem className='flex flex-col w-full gap-3 md:flex-row md:w-auto md:items-center'>
           <Link href={`tel:${WHATSAPP_NUMBER}`}>
             <Button size='xl' className='w-full'>
               Reservasi Sekarang
@@ -40,8 +47,8 @@ export default function CTA() {
               <MessageCircle />
             </Button>
           </Link>
-        </div>
-      </div>
+        </FadeInItem>
+      </FadeInStagger>
     </section>
   )
 }

@@ -1,3 +1,5 @@
+'use client'
+
 import heroBackground from '@/assets/images/bg-hero.webp'
 import altHeroBackground from '@/assets/images/alt-bg-hero.webp'
 import { BUSINESS_NAME } from '@/lib/constants'
@@ -5,6 +7,7 @@ import { Calendar, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
 import { Button } from '../ui/button'
 import { AccentLabel } from '../ui/label'
+import { FadeInItem, FadeInStagger } from '../ui/motion'
 
 export default function Hero() {
   return (
@@ -26,20 +29,26 @@ export default function Hero() {
         />
       </div>
       <div className='absolute inset-0 bg-linear-to-b sm:bg-linear-to-r from-beige via-beige sm:via-35% to-transparent sm:to-70%' />
-      <div className='relative mx-auto max-w-6xl px-4 z-10'>
+      <FadeInStagger className='relative mx-auto max-w-6xl px-4 z-10'>
         <div className='space-y-6 mb-8'>
-          <AccentLabel>{BUSINESS_NAME}</AccentLabel>
-          <h1 className='max-w-full sm:max-w-md font-medium font-heading text-3xl sm:text-5xl leading-snug'>
-            Perawatan Kulit yang <span className='text-accent'>Nyaman</span>,{' '}
-            <span className='text-accent'>Personal</span>, dan{' '}
-            <span className='text-accent'>Terpercaya</span>
-          </h1>
-          <p className='max-w-full sm:max-w-sm text-muted-foreground leading-relaxed'>
-            Kami hadir untuk memberikan pengalaman perawatan kulit yang aman,
-            nyaman dan efektif bersama dokter profesional.
-          </p>
+          <FadeInItem>
+            <AccentLabel>{BUSINESS_NAME}</AccentLabel>
+          </FadeInItem>
+          <FadeInItem>
+            <h1 className='max-w-full sm:max-w-md font-medium font-heading text-3xl sm:text-5xl leading-snug'>
+              Perawatan Kulit yang <span className='text-accent'>Nyaman</span>,{' '}
+              <span className='text-accent'>Personal</span>, dan{' '}
+              <span className='text-accent'>Terpercaya</span>
+            </h1>
+          </FadeInItem>
+          <FadeInItem>
+            <p className='max-w-full sm:max-w-sm text-muted-foreground leading-relaxed'>
+              Kami hadir untuk memberikan pengalaman perawatan kulit yang aman,
+              nyaman dan efektif bersama dokter profesional.
+            </p>
+          </FadeInItem>
         </div>
-        <div className='flex flex-col items-stretch gap-3 sm:flex-row sm:items-center'>
+        <FadeInItem className='flex flex-col items-stretch gap-3 sm:flex-row sm:items-center'>
           <Button size='xl' className='w-full sm:w-auto'>
             Reservasi Sekarang
             <Calendar />
@@ -52,8 +61,8 @@ export default function Hero() {
             Lihat Perawatan
             <ChevronRight />
           </Button>
-        </div>
-      </div>
+        </FadeInItem>
+      </FadeInStagger>
     </section>
   )
 }

@@ -1,3 +1,5 @@
+'use client'
+
 import consultationRoom from '@/assets/images/consultation-room.webp'
 import medicineBox from '@/assets/images/medicine-box.webp'
 import receptionist from '@/assets/images/recepsionist.webp'
@@ -9,6 +11,7 @@ import { ArrowRight, CheckCircle } from 'lucide-react'
 import Image from 'next/image'
 import { Button } from '../ui/button'
 import { AccentLabel } from '../ui/label'
+import { FadeIn, FadeInItem, FadeInStagger } from '../ui/motion'
 
 const CHECKLISTS = [
   'Perawatan personal sesuai kebutuhan kulit',
@@ -20,7 +23,7 @@ export default function Gallery() {
   return (
     <section id='galeri' className='py-16 md:py-24 bg-white'>
       <div className='mx-auto max-w-6xl px-4 grid grid-cols-1 items-center justify-center gap-8 md:grid-cols-5 md:gap-12'>
-        <div className='col-span-1 space-y-4 mb-8 md:col-span-2'>
+        <FadeIn className='col-span-1 space-y-4 mb-8 md:col-span-2'>
           <AccentLabel>Galeri Kami</AccentLabel>
           <h2 className='font-heading font-medium text-3xl md:text-4xl leading-tight'>
             Kenyamanan di
@@ -45,10 +48,14 @@ export default function Gallery() {
             Selengkapnya Tentang Kami
             <ArrowRight />
           </Button>
-        </div>
-        <div className='col-span-1 space-y-4 md:col-span-3'>
+        </FadeIn>
+        <FadeInStagger className='col-span-1 space-y-4 md:col-span-3'>
           <div className='grid grid-cols-2 gap-3 md:grid-cols-5 md:gap-4'>
-            <div className='group col-span-1 relative h-40 rounded-4xl overflow-hidden hover:rotate-2 transition-transform duration-500 md:col-span-3 md:h-72'>
+            <FadeInItem
+              whileHover={{ rotate: 2 }}
+              transition={{ duration: 0.5 }}
+              className='group col-span-1 relative h-40 rounded-4xl overflow-hidden md:col-span-3 md:h-72'
+            >
               <Image
                 src={receptionist}
                 alt='Resepsionis'
@@ -57,8 +64,12 @@ export default function Gallery() {
                 priority
                 className='object-cover object-center transition-transform duration-500 group-hover:scale-105'
               />
-            </div>
-            <div className='group col-span-1 relative h-40 rounded-4xl overflow-hidden hover:-rotate-1 transition-transform duration-500 md:col-span-2 md:h-72'>
+            </FadeInItem>
+            <FadeInItem
+              whileHover={{ rotate: -1 }}
+              transition={{ duration: 0.5 }}
+              className='group col-span-1 relative h-40 rounded-4xl overflow-hidden md:col-span-2 md:h-72'
+            >
               <Image
                 src={waitingRoom}
                 alt='Ruang Tunggu'
@@ -67,10 +78,14 @@ export default function Gallery() {
                 priority
                 className='object-cover object-center transition-transform duration-500 group-hover:scale-105'
               />
-            </div>
+            </FadeInItem>
           </div>
           <div className='grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4'>
-            <div className='group relative h-32 rounded-4xl overflow-hidden hover:rotate-1 transition-transform duration-500 md:h-48'>
+            <FadeInItem
+              whileHover={{ rotate: 1 }}
+              transition={{ duration: 0.5 }}
+              className='group relative h-32 rounded-4xl overflow-hidden md:h-48'
+            >
               <Image
                 src={consultationRoom}
                 alt='Ruang Konsultasi'
@@ -79,8 +94,12 @@ export default function Gallery() {
                 priority
                 className='object-cover object-center transition-transform duration-500 group-hover:scale-105'
               />
-            </div>
-            <div className='group relative h-32 rounded-4xl overflow-hidden hover:-rotate-1 transition-transform duration-500 md:h-48'>
+            </FadeInItem>
+            <FadeInItem
+              whileHover={{ rotate: -1 }}
+              transition={{ duration: 0.5 }}
+              className='group relative h-32 rounded-4xl overflow-hidden md:h-48'
+            >
               <Image
                 src={treatmentRoom}
                 alt='Ruang Perawatan'
@@ -89,8 +108,12 @@ export default function Gallery() {
                 priority
                 className='object-cover object-center transition-transform duration-500 group-hover:scale-105'
               />
-            </div>
-            <div className='group relative h-32 rounded-4xl overflow-hidden hover:rotate-2 transition-transform duration-500 md:h-48'>
+            </FadeInItem>
+            <FadeInItem
+              whileHover={{ rotate: 2 }}
+              transition={{ duration: 0.5 }}
+              className='group relative h-32 rounded-4xl overflow-hidden md:h-48'
+            >
               <Image
                 src={medicineBox}
                 alt='Kotak Obat'
@@ -99,8 +122,12 @@ export default function Gallery() {
                 priority
                 className='object-cover object-center transition-transform duration-500 group-hover:scale-105'
               />
-            </div>
-            <div className='group relative h-32 rounded-4xl overflow-hidden hover:-rotate-1 transition-transform duration-500 md:h-48'>
+            </FadeInItem>
+            <FadeInItem
+              whileHover={{ rotate: -1 }}
+              transition={{ duration: 0.5 }}
+              className='group relative h-32 rounded-4xl overflow-hidden md:h-48'
+            >
               <Image
                 src={wastafel}
                 alt='Wastafel'
@@ -109,9 +136,9 @@ export default function Gallery() {
                 priority
                 className='object-cover object-center transition-transform duration-500 group-hover:scale-105'
               />
-            </div>
+            </FadeInItem>
           </div>
-        </div>
+        </FadeInStagger>
       </div>
     </section>
   )

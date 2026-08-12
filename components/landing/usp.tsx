@@ -1,7 +1,10 @@
+'use client'
+
 import leaf1 from '@/assets/images/leaf-1.webp'
 import leaf2 from '@/assets/images/leaf-2.webp'
 import { Cpu, FlaskConical, Stethoscope, Target } from 'lucide-react'
 import Image from 'next/image'
+import { FadeInItem, FadeInStagger } from '../ui/motion'
 
 const SELLING_POINTS = [
   {
@@ -52,9 +55,9 @@ export default function USP() {
         />
       </div>
 
-      <div className='mx-auto max-w-6xl px-4 grid grid-cols-1 gap-10 md:grid-cols-2 lg:gap-0 lg:grid-cols-4 items-center justify-center'>
+      <FadeInStagger className='mx-auto max-w-6xl px-4 grid grid-cols-1 gap-10 md:grid-cols-2 lg:gap-0 lg:grid-cols-4 items-center justify-center'>
         {SELLING_POINTS.map((point, index) => (
-          <div
+          <FadeInItem
             key={index}
             className='flex flex-col text-center items-center justify-center gap-2.5 px-4 md:px-12'
           >
@@ -63,9 +66,9 @@ export default function USP() {
               {point.title}
             </h3>
             <p className='text-sm text-muted/80'>{point.desc}</p>
-          </div>
+          </FadeInItem>
         ))}
-      </div>
+      </FadeInStagger>
     </section>
   )
 }

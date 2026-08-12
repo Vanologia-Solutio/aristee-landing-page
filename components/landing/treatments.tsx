@@ -1,3 +1,5 @@
+'use client'
+
 import facial from '@/assets/images/treatments/facial.webp'
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
@@ -10,6 +12,7 @@ import {
   CardTitle,
 } from '../ui/card'
 import { AccentLabel } from '../ui/label'
+import { FadeIn, FadeInItem, FadeInStagger } from '../ui/motion'
 
 const TREATMENTS = [
   {
@@ -40,9 +43,9 @@ const TREATMENTS = [
 
 export default function Treatments() {
   return (
-    <section id='perawatan' className='py-16 md:py-24 bg-beige'>
+    <section id='perawatan' className='py-16 md:py-24'>
       <div className='mx-auto max-w-6xl px-4'>
-        <div className='flex flex-col items-start gap-4 mb-8 md:flex-row md:items-end md:justify-between'>
+        <FadeIn className='flex flex-col items-start gap-4 mb-8 md:flex-row md:items-end md:justify-between'>
           <div className='space-y-4'>
             <AccentLabel>Perawatan Unggulan</AccentLabel>
             <h2 className='font-heading font-medium text-3xl leading-tight'>
@@ -53,43 +56,44 @@ export default function Treatments() {
             Lihat Semua Perawatan
             <ArrowRight className='group-hover:translate-x-1 duration-250' />
           </Button>
-        </div>
-        <div className='grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-4'>
+        </FadeIn>
+        <FadeInStagger className='grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-4'>
           {TREATMENTS.map(treatment => (
-            <Card
-              id={treatment.id}
-              key={treatment.id}
-              className='group relative overflow-hidden pt-0'
-            >
-              <div className='relative aspect-4/3 w-full overflow-hidden'>
-                <Image
-                  src={treatment.image}
-                  alt={treatment.title}
-                  fill
-                  sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                  priority
-                  className='object-cover object-center transition-transform duration-500 group-hover:scale-105'
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className='font-sans'>{treatment.title}</CardTitle>
-                <CardDescription className='line-clamp-2 text-muted-foreground'>
-                  {treatment.desc}
-                </CardDescription>
-              </CardHeader>
-              <CardFooter>
-                <Button
-                  size='sm'
-                  variant='link'
-                  className='group p-0 text-accent'
-                >
-                  Selengkapnya
-                  <ArrowRight className='group-hover:translate-x-1 duration-250' />
-                </Button>
-              </CardFooter>
-            </Card>
+            <FadeInItem key={treatment.id}>
+              <Card
+                id={treatment.id}
+                className='group relative overflow-hidden pt-0'
+              >
+                <div className='relative aspect-4/3 w-full overflow-hidden'>
+                  <Image
+                    src={treatment.image}
+                    alt={treatment.title}
+                    fill
+                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                    priority
+                    className='object-cover object-center transition-transform duration-500 group-hover:scale-105'
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle className='font-sans'>{treatment.title}</CardTitle>
+                  <CardDescription className='line-clamp-2 text-muted-foreground'>
+                    {treatment.desc}
+                  </CardDescription>
+                </CardHeader>
+                <CardFooter>
+                  <Button
+                    size='sm'
+                    variant='link'
+                    className='group p-0 text-accent'
+                  >
+                    Selengkapnya
+                    <ArrowRight className='group-hover:translate-x-1 duration-250' />
+                  </Button>
+                </CardFooter>
+              </Card>
+            </FadeInItem>
           ))}
-        </div>
+        </FadeInStagger>
       </div>
     </section>
   )

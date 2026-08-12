@@ -6,6 +6,7 @@
 
 @theme inline {
   --color-background: var(--background);
+  --color-secondary-background: var(--secondary-background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
   --font-heading: var(--font-heading);
@@ -49,24 +50,24 @@
 
 :root {
   color-scheme: light;
-  --background: #fffafa;
-  --foreground: #273553;
-  --card: #ffffff;
-  --card-foreground: #273553;
-  --popover: #ffffff;
-  --popover-foreground: #273553;
-  --primary: #1e3567;
-  --primary-foreground: #ffffff;
-  --secondary: #f7f7f7;
-  --secondary-foreground: #1e3567;
-  --muted: #f7f7f7;
+  --background: #f7eee4;
+  --foreground: #1b3c73;
+  --card: #f7eee4;
+  --card-foreground: #1b3c73;
+  --popover: #f7eee4;
+  --popover-foreground: #1b3c73;
+  --primary: #1b3c73;
+  --primary-foreground: #eaeaea;
+  --secondary: #eaeaea;
+  --secondary-foreground: #1b3c73;
+  --muted: #eaeaea;
   --muted-foreground: #667085;
-  --accent: #f27c9a;
-  --accent-foreground: #ffffff;
+  --accent: #f4538a;
+  --accent-foreground: #f7eee4;
   --destructive: #c94d69;
   --border: #f1dfe3;
   --input: #f1dfe3;
-  --ring: #f27c9a;
+  --ring: #f4538a;
   --blush: #f8edef;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
@@ -129,5 +130,15 @@
 
   html {
     @apply font-sans;
+  }
+}
+
+@keyframes journey-flow {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(400%);
   }
 }

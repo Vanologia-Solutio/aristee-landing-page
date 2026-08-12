@@ -1,4 +1,4 @@
-import facial from '@/assets/images/treatments/facial.png'
+import facial from '@/assets/images/treatments/facial.webp'
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import { Button } from '../ui/button'
@@ -40,12 +40,12 @@ const TREATMENTS = [
 
 export default function Treatments() {
   return (
-    <section id='perawatan' className='mx-auto w-full max-w-6xl py-24'>
+    <section id='perawatan' className='mx-auto w-full max-w-6xl px-4 py-24'>
       <div className='flex items-end justify-between mb-8'>
         <div className='space-y-4'>
           <AccentLabel>Perawatan Unggulan</AccentLabel>
           <h2 className='font-heading font-medium text-3xl leading-tight'>
-            Perjalanan Menuju Kulit Sehat Anda
+            Program Perawatan yang Efektif
           </h2>
         </div>
         <Button size='sm' variant='link' className='group p-0 text-accent'>
@@ -60,7 +60,7 @@ export default function Treatments() {
             key={treatment.id}
             className='group relative overflow-hidden pt-0'
           >
-            <div className='relative aspect-3/2 w-full overflow-hidden'>
+            <div className='relative aspect-4/3 w-full overflow-hidden'>
               <Image
                 src={treatment.image}
                 alt={treatment.title}
@@ -71,7 +71,7 @@ export default function Treatments() {
               />
             </div>
             <CardHeader>
-              <CardTitle>{treatment.title}</CardTitle>
+              <CardTitle className='font-sans'>{treatment.title}</CardTitle>
               <CardDescription className='line-clamp-2 text-muted-foreground'>
                 {treatment.desc}
               </CardDescription>

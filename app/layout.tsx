@@ -1,3 +1,4 @@
+import FloatingWhatsAppButton from '@/components/general/floating-whatsapp-button'
 import Footer from '@/components/general/footer'
 import Navbar from '@/components/general/navbar'
 import { cn } from '@/lib/utils'
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
           <Navbar />
           {children}
           <Footer />
+          <FloatingWhatsAppButton />
         </div>
       </body>
     </html>

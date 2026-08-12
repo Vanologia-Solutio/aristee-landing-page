@@ -1,4 +1,10 @@
-import sampleImage from '@/assets/images/treatments/facial.png'
+import consultationRoom from '@/assets/images/treatments/consultation-room.webp'
+import medicineBox from '@/assets/images/treatments/medicine-box.webp'
+import receptionist from '@/assets/images/treatments/recepsionist.webp'
+import treatmentRoom from '@/assets/images/treatments/treatment-room.webp'
+import waitingRoom from '@/assets/images/treatments/waiting-room.webp'
+import wastafel from '@/assets/images/treatments/wastafel.webp'
+import { BUSINESS_NAME } from '@/lib/constants'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 import Image from 'next/image'
 import { Button } from '../ui/button'
@@ -13,7 +19,7 @@ const CHECKLISTS = [
 export default function Gallery() {
   return (
     <section id='galeri' className='py-24'>
-      <div className='mx-auto max-w-6xl grid grid-cols-5 items-center justify-center gap-10'>
+      <div className='mx-auto max-w-6xl px-4 grid grid-cols-5 items-center justify-center gap-12'>
         <div className='col-span-2 space-y-4 mb-8'>
           <AccentLabel>Galeri Kami</AccentLabel>
           <h2 className='font-heading font-medium text-4xl leading-tight'>
@@ -22,10 +28,10 @@ export default function Gallery() {
             <span className='text-accent'>Setiap Ruang</span>
           </h2>
           <p className='text-muted-foreground leading-relaxed'>
-            Klinik Kecantikan Aristée hadir untuk memberikan pengalaman
-            perawatan kulit yang aman, nyaman, dan berkualitas dengan sentuhan
-            personal. Kami percaya setiap kulit itu unik dan berhak mendapatkan
-            perawatan terbaik.
+            {BUSINESS_NAME} hadir untuk memberikan pengalaman perawatan kulit
+            yang aman, nyaman, dan berkualitas dengan sentuhan personal. Kami
+            percaya setiap kulit itu unik dan berhak mendapatkan perawatan
+            terbaik.
           </p>
           <ul className='space-y-2.5 mt-6 mb-8'>
             {CHECKLISTS.map((item, index) => (
@@ -42,20 +48,20 @@ export default function Gallery() {
         </div>
         <div className='col-span-3 space-y-4'>
           <div className='grid grid-cols-5 gap-4'>
-            <div className='group col-span-3 relative h-80 rounded-2xl overflow-hidden hover:rotate-2 transition-transform duration-500'>
+            <div className='group col-span-3 relative h-72 rounded-4xl overflow-hidden hover:rotate-2 transition-transform duration-500'>
               <Image
-                src={sampleImage}
-                alt='Sample Treatment'
+                src={receptionist}
+                alt='Resepsionis'
                 fill
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                 priority
                 className='object-cover object-center transition-transform duration-500 group-hover:scale-105'
               />
             </div>
-            <div className='group col-span-2 relative h-80 rounded-2xl overflow-hidden hover:-rotate-1 transition-transform duration-500'>
+            <div className='group col-span-2 relative h-72 rounded-4xl overflow-hidden hover:-rotate-1 transition-transform duration-500'>
               <Image
-                src={sampleImage}
-                alt='Sample Treatment'
+                src={waitingRoom}
+                alt='Ruang Tunggu'
                 fill
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                 priority
@@ -64,40 +70,40 @@ export default function Gallery() {
             </div>
           </div>
           <div className='grid grid-cols-4 gap-4'>
-            <div className='group relative h-48 rounded-2xl overflow-hidden hover:rotate-1 transition-transform duration-500'>
+            <div className='group relative h-48 rounded-4xl overflow-hidden hover:rotate-1 transition-transform duration-500'>
               <Image
-                src={sampleImage}
-                alt='Sample Treatment'
+                src={consultationRoom}
+                alt='Ruang Konsultasi'
                 fill
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                 priority
                 className='object-cover object-center transition-transform duration-500 group-hover:scale-105'
               />
             </div>
-            <div className='group relative h-48 rounded-2xl overflow-hidden hover:-rotate-1 transition-transform duration-500'>
+            <div className='group relative h-48 rounded-4xl overflow-hidden hover:-rotate-1 transition-transform duration-500'>
               <Image
-                src={sampleImage}
-                alt='Sample Treatment'
+                src={treatmentRoom}
+                alt='Ruang Perawatan'
                 fill
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                 priority
                 className='object-cover object-center transition-transform duration-500 group-hover:scale-105'
               />
             </div>
-            <div className='group relative h-48 rounded-2xl overflow-hidden hover:rotate-2 transition-transform duration-500'>
+            <div className='group relative h-48 rounded-4xl overflow-hidden hover:rotate-2 transition-transform duration-500'>
               <Image
-                src={sampleImage}
-                alt='Sample Treatment'
+                src={medicineBox}
+                alt='Kotak Obat'
                 fill
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                 priority
                 className='object-cover object-center transition-transform duration-500 group-hover:scale-105'
               />
             </div>
-            <div className='group relative h-48 rounded-2xl overflow-hidden hover:-rotate-1 transition-transform duration-500'>
+            <div className='group relative h-48 rounded-4xl overflow-hidden hover:-rotate-1 transition-transform duration-500'>
               <Image
-                src={sampleImage}
-                alt='Sample Treatment'
+                src={wastafel}
+                alt='Wastafel'
                 fill
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                 priority

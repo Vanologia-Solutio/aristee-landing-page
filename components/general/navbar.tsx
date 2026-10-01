@@ -82,12 +82,18 @@ export default function Navbar() {
               </motion.span>
             ))}
           </div>
-          <Link href='#operasional' className='hidden md:block'>
-            <Button size='lg' variant='accent-outline'>
-              Hubungi Kami
-              <Phone />
-            </Button>
-          </Link>
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Link href='#operasional' className='hidden md:block'>
+              <Button size='lg' variant='accent-outline'>
+                Hubungi Kami
+                <Phone />
+              </Button>
+            </Link>
+          </motion.div>
           <Button
             variant='ghost'
             size='icon'

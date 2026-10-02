@@ -1,45 +1,12 @@
 'use client'
 
-import facial from '@/assets/images/treatments/facial.webp'
+import { FEATURED_TREATMENTS } from '@/lib/treatments'
 import { ArrowRight } from 'lucide-react'
-import Image from 'next/image'
+import Link from 'next/link'
+import TreatmentCard from '../treatments/treatment-card'
 import { Button } from '../ui/button'
-import {
-  Card,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '../ui/card'
 import { AccentLabel } from '../ui/label'
 import { FadeIn, FadeInItem, FadeInStagger } from '../ui/motion'
-
-const TREATMENTS = [
-  {
-    id: 'perawatan-wajah',
-    title: 'Perawatan Wajah',
-    desc: 'Perawatan kulit wajah yang dirancang untuk mengatasi berbagai masalah kulit, termasuk jerawat, penuaan dini, dan hiperpigmentasi.',
-    image: facial,
-  },
-  {
-    id: 'perawatan-tubuh',
-    title: 'Perawatan Tubuh',
-    desc: 'Perawatan kulit tubuh yang membantu mengatasi masalah kulit seperti selulit, stretch mark, dan kulit kusam.',
-    image: facial,
-  },
-  {
-    id: 'perawatan-kuku',
-    title: 'Perawatan Kuku',
-    desc: 'Perawatan kuku yang menjaga kesehatan dan keindahan kuku, termasuk perawatan kutikula dan penguatan kuku.',
-    image: facial,
-  },
-  {
-    id: 'perawatan-rambut',
-    title: 'Perawatan Rambut',
-    desc: 'Perawatan rambut yang membantu mengatasi masalah rambut seperti kerontokan, ketombe, dan rambut kering.',
-    image: facial,
-  },
-]
 
 export default function Treatments() {
   return (
@@ -52,45 +19,17 @@ export default function Treatments() {
               Program Perawatan yang Efektif
             </h2>
           </div>
-          <Button size='sm' variant='link' className='group p-0 text-accent'>
-            Lihat Semua Perawatan
-            <ArrowRight className='group-hover:translate-x-1 duration-250' />
-          </Button>
+          <Link href='/perawatan'>
+            <Button size='sm' variant='link' className='group p-0 text-accent'>
+              Lihat Semua Perawatan
+              <ArrowRight className='group-hover:translate-x-1 duration-250' />
+            </Button>
+          </Link>
         </FadeIn>
         <FadeInStagger className='grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-4'>
-          {TREATMENTS.map(treatment => (
+          {FEATURED_TREATMENTS.map(treatment => (
             <FadeInItem key={treatment.id}>
-              <Card
-                id={treatment.id}
-                className='group relative overflow-hidden pt-0'
-              >
-                <div className='relative aspect-4/3 w-full overflow-hidden'>
-                  <Image
-                    src={treatment.image}
-                    alt={treatment.title}
-                    fill
-                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                    priority
-                    className='object-cover object-center transition-transform duration-500 group-hover:scale-105'
-                  />
-                </div>
-                <CardHeader>
-                  <CardTitle className='font-sans'>{treatment.title}</CardTitle>
-                  <CardDescription className='line-clamp-2 text-muted-foreground'>
-                    {treatment.desc}
-                  </CardDescription>
-                </CardHeader>
-                <CardFooter>
-                  <Button
-                    size='sm'
-                    variant='link'
-                    className='group p-0 text-accent'
-                  >
-                    Selengkapnya
-                    <ArrowRight className='group-hover:translate-x-1 duration-250' />
-                  </Button>
-                </CardFooter>
-              </Card>
+              <TreatmentCard treatment={treatment} priority />
             </FadeInItem>
           ))}
         </FadeInStagger>

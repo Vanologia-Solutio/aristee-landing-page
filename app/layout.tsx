@@ -6,7 +6,11 @@ import type { Metadata } from 'next'
 import { Lora, Outfit } from 'next/font/google'
 import './globals.css'
 
-const loraHeading = Lora({ subsets: ['latin'], variable: '--font-heading' })
+const loraHeading = Lora({
+  subsets: ['latin'],
+  style: ['normal', 'italic'],
+  variable: '--font-heading',
+})
 const outfit = Outfit({ subsets: ['latin'], variable: '--font-sans' })
 
 export const metadata: Metadata = {

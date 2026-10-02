@@ -10,7 +10,7 @@ import { FadeInItem, FadeInStagger } from '../ui/motion'
 
 export default function CTA() {
   return (
-    <section id='cta' className='relative py-16 md:py-24 bg-beige'>
+    <section id='cta' className='relative py-16 md:py-24 bg-blush'>
       <Image
         src={ctaBackground}
         alt='Consultation'
@@ -18,7 +18,7 @@ export default function CTA() {
         className='object-cover object-top opacity-20'
       />
 
-      <div className='absolute inset-0 bg-linear-to-b from-beige to-transparent' />
+      <div className='absolute inset-0 bg-linear-to-b from-blush to-transparent' />
 
       <FadeInStagger className='relative z-10 mx-auto max-w-6xl px-4 flex flex-col items-center gap-6'>
         <FadeInItem>

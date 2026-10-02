@@ -28,7 +28,7 @@ export default function Hero() {
           className='object-cover object-center grayscale-20'
         />
       </div>
-      <div className='absolute inset-0 bg-linear-to-b sm:bg-linear-to-r from-beige via-beige sm:via-35% to-transparent sm:to-70%' />
+      <div className='absolute inset-0 bg-linear-to-b sm:bg-linear-to-r from-blush via-blush sm:via-35% to-transparent sm:to-70%' />
       <FadeInStagger className='relative mx-auto max-w-6xl px-4 z-10'>
         <div className='space-y-6 mb-8'>
           <FadeInItem>

@@ -51,7 +51,7 @@ export default function FloatingWhatsAppButton() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 10, scale: 0.8 }}
                 transition={{ duration: 0.2 }}
-                className='absolute bottom-20 right-0 bg-beige border border-border rounded-md shadow-lg shadow-green-600/10 min-w-max max-w-[calc(100vw-3rem)] overflow-hidden'
+                className='absolute bottom-20 right-0 bg-blush border border-border rounded-md shadow-lg shadow-green-600/10 min-w-max max-w-[calc(100vw-3rem)] overflow-hidden'
               >
                 {whatsappMessages.map((msg, idx) => (
                   <a
@@ -59,7 +59,7 @@ export default function FloatingWhatsAppButton() {
                     href={msg.url}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='block px-4 py-3 text-foreground text-sm whitespace-nowrap hover:bg-green-600 hover:text-beige transition-colors'
+                    className='block px-4 py-3 text-foreground text-sm whitespace-nowrap hover:bg-green-600 hover:text-blush transition-colors'
                     onClick={() => setShowMenu(false)}
                   >
                     {msg.text}

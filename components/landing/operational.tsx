@@ -17,7 +17,7 @@ export default function Operational() {
   return (
     <section
       id='operasional'
-      className='py-16 md:py-24 bg-linear-to-b from-white via-white/50 to-beige'
+      className='py-16 md:py-24 bg-linear-to-b from-white via-white/50 to-blush'
     >
       <div className='mx-auto max-w-6xl px-4 space-y-10'>
         <FadeIn className='flex flex-col items-center gap-2.5 text-center'>

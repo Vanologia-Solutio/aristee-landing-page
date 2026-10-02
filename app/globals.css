@@ -1,6 +1,6 @@
-@import "tailwindcss";
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -8,7 +8,9 @@
   --color-background: var(--background);
   --color-secondary-background: var(--secondary-background);
   --color-foreground: var(--foreground);
-  --color-beige: var(--beige);
+  --color-blush: var(--blush);
+  --color-gold: var(--gold);
+  --color-blush-strong: var(--blush-strong);
   --font-sans: var(--font-sans);
   --font-heading: var(--font-heading);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -53,24 +55,25 @@
   color-scheme: light;
   --background: #ffffff;
   --foreground: #1b3c73;
-  --beige: #fff5ea;
   --card: #ffffff;
   --card-foreground: #1b3c73;
   --popover: #ffffff;
   --popover-foreground: #1b3c73;
   --primary: #1b3c73;
-  --primary-foreground: #eaeaea;
-  --secondary: #eaeaea;
+  --primary-foreground: #ffffff;
+  --secondary: #fce7ee;
   --secondary-foreground: #1b3c73;
-  --muted: #eaeaea;
-  --muted-foreground: #667085;
+  --muted: #fdf0f4;
+  --muted-foreground: #6b7090;
   --accent: #f4538a;
   --accent-foreground: #ffffff;
   --destructive: #c94d69;
-  --border: #f1dfe3;
-  --input: #f1dfe3;
+  --border: #f8d9e3;
+  --input: #f8d9e3;
   --ring: #f4538a;
-  --blush: #f8edef;
+  --blush: #fff4f7;
+  --blush-strong: #fde4ec;
+  --gold: #c39a6b;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
@@ -143,4 +146,10 @@
   to {
     transform: translateX(400%);
   }
+}
+
+/* Fine paper-like grain, tinted with the accent pink */
+@utility bg-grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.957 0 0 0 0 0.325 0 0 0 0 0.541 0 0 0 0.35 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
 }

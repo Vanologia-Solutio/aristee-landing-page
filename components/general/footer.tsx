@@ -70,19 +70,19 @@ export default function Footer() {
               <Link href='/'>Beranda</Link>
             </li>
             <li>
-              <Link href='#perjalanan'>Perjalanan</Link>
+              <Link href='/#perjalanan'>Perjalanan</Link>
             </li>
             <li>
-              <Link href='#perawatan'>Perawatan</Link>
+              <Link href='/#perawatan'>Perawatan</Link>
             </li>
             <li>
-              <Link href='#galeri'>Galeri</Link>
+              <Link href='/#galeri'>Galeri</Link>
             </li>
             <li>
-              <Link href='#operasional'>Operasional</Link>
+              <Link href='/#operasional'>Operasional</Link>
             </li>
             <li>
-              <Link href='#cta'>Kontak</Link>
+              <Link href='/#cta'>Kontak</Link>
             </li>
           </ul>
         </FadeInItem>

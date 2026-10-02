@@ -15,11 +15,11 @@ import { Fragment, useEffect, useState } from 'react'
 import { Button } from '../ui/button'
 
 const NAV_LINKS = [
-  { label: 'Beranda', href: '#beranda' },
-  { label: 'Tentang Kami', href: '#perjalanan' },
-  { label: 'Perawatan', href: '#perawatan' },
-  { label: 'Galeri', href: '#galeri' },
-  { label: 'Kontak', href: '#operasional' },
+  { label: 'Beranda', href: '/#beranda' },
+  { label: 'Tentang Kami', href: '/#perjalanan' },
+  { label: 'Perawatan', href: '/#perawatan' },
+  { label: 'Galeri', href: '/#galeri' },
+  { label: 'Kontak', href: '/#operasional' },
 ] as const
 
 export default function Navbar() {
@@ -45,7 +45,7 @@ export default function Navbar() {
         className={cn(
           'fixed inset-x-0 top-0 z-50 transition-all duration-250',
           isScrolled
-            ? 'bg-beige md:bg-beige/90 backdrop-blur-sm py-3.5'
+            ? 'bg-blush md:bg-blush/90 backdrop-blur-sm py-3.5'
             : 'bg-transparent py-5',
         )}
       >
@@ -87,7 +87,7 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Link href='#operasional' className='hidden md:block'>
+            <Link href='/#operasional' className='hidden md:block'>
               <Button size='lg' variant='accent-outline'>
                 Hubungi Kami
                 <Phone />
@@ -113,7 +113,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className='fixed inset-0 z-100 bg-beige flex flex-col items-center justify-center gap-8 md:hidden'
+            className='fixed inset-0 z-100 bg-blush flex flex-col items-center justify-center gap-8 md:hidden'
           >
             <Button
               variant='ghost'
@@ -136,7 +136,7 @@ export default function Navbar() {
                 </Link>
               ))}
             </div>
-            <Link href='#operasional' onClick={() => setIsMenuOpen(false)}>
+            <Link href='/#operasional' onClick={() => setIsMenuOpen(false)}>
               <Button size='lg' variant='accent-outline'>
                 Hubungi Kami
                 <Phone />

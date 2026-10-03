@@ -9,6 +9,7 @@ export const matureSkinHydrationTreatment: Treatment = {
   tags: ['Hydrate', 'Restore', 'Glow'],
 
   heroImage: '/images/treatments/mature-skin-hydration/hero.png',
+  flyerImage: '/images/treatments/mature-skin-hydration/flyer.png',
 
   shortDescription:
     'Hidrasi intens untuk kulit mature (40+) yang kering, kusam dan kehilangan elastisitas.',

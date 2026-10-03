@@ -9,6 +9,7 @@ export const pdrnKoreanTreatment: Treatment = {
   tags: ['Repair', 'Rejuvenate', 'Glow'],
 
   heroImage: '/images/treatments/pdrn-korean/hero.png',
+  flyerImage: '/images/treatments/pdrn-korean/flyer.png',
 
   shortDescription:
     'Perawatan intensif PDRN Premium untuk meregenerasi sel kulit dan memperkuat skin barrier.',

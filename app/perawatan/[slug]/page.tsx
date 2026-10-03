@@ -13,7 +13,7 @@ import { FadeIn, FadeInItem, FadeInStagger } from '@/components/ui/motion'
 import { BUSINESS_NAME, WHATSAPP_URL } from '@/lib/constants'
 import { getTreatmentBySlug, TREATMENTS } from '@/lib/treatments'
 import { formatPrice } from '@/lib/utils'
-import { ArrowRight, Check, Clock } from 'lucide-react'
+import { ArrowRight, Check, Clock, Download } from 'lucide-react'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -80,7 +80,7 @@ export default async function TreatmentDetailPage(
                 <TagLine tags={treatment.tags} />
               </FadeInItem>
               <FadeInItem>
-                <Flourish className='w-48' />
+                <Flourish className='w-fit' />
               </FadeInItem>
               <FadeInItem>
                 <p className='max-w-lg text-base text-muted-foreground leading-relaxed md:text-lg'>
@@ -108,6 +108,23 @@ export default async function TreatmentDetailPage(
                   </Button>
                 </Link>
               </FadeInItem>
+              {treatment.flyerImage && (
+                <FadeInItem>
+                  <a
+                    href={treatment.flyerImage}
+                    download={`${BUSINESS_NAME} - ${treatment.name}.png`}
+                  >
+                    <Button
+                      size='sm'
+                      variant='link'
+                      className='group p-0 text-accent'
+                    >
+                      <Download />
+                      Unduh Flyer
+                    </Button>
+                  </a>
+                </FadeInItem>
+              )}
             </FadeInStagger>
 
             <FadeIn
@@ -181,10 +198,10 @@ export default async function TreatmentDetailPage(
                   key={step.title}
                   className='group relative overflow-hidden rounded-[2rem] bg-card p-7 ring-1 ring-border shadow-[0_24px_48px_-32px_rgb(244_83_138/0.4)] transition-all duration-500 hover:-translate-y-1 hover:ring-accent/30'
                 >
-                  <span className='absolute -top-3 right-5 font-heading text-8xl italic leading-none text-accent/10 transition-colors duration-500 group-hover:text-accent/20'>
+                  <span className='absolute top-3 right-5 font-heading text-8xl italic leading-none text-accent/10 transition-colors duration-500 group-hover:text-accent/20'>
                     {i + 1}
                   </span>
-                  <span className='relative flex size-11 items-center justify-center rounded-full bg-blush-strong font-heading text-lg text-accent ring-4 ring-blush'>
+                  <span className='relative flex size-12 items-center justify-center rounded-full bg-blush-strong font-heading text-xl text-accent ring-4 ring-blush'>
                     {String(i + 1).padStart(2, '0')}
                   </span>
                   <h3 className='relative mt-5 font-heading text-xl font-medium leading-snug'>

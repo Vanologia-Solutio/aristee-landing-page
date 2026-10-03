@@ -9,6 +9,7 @@ export const collagenStimulatorTreatment: Treatment = {
   tags: ['Hydrate', 'Rejuvenate', 'Stimulate'],
 
   heroImage: '/images/treatments/collagen-stimulator/hero.png',
+  flyerImage: '/images/treatments/collagen-stimulator/flyer.png',
 
   shortDescription:
     'Perawatan injeksi untuk meningkatkan hidrasi dan merangsang produksi kolagen alami.',

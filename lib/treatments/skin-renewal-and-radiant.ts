@@ -9,6 +9,7 @@ export const skinRenewalAndRadiantTreatment: Treatment = {
   tags: ['Cerah', 'Halus', 'Bercahaya'],
 
   heroImage: '/images/treatments/skin-renewal-and-radiant/hero.png',
+  flyerImage: '/images/treatments/skin-renewal-and-radiant/flyer.png',
 
   shortDescription:
     'Deep cleansing, chemical peeling dan nutrisi aktif untuk mengembalikan cahaya alami kulit usia 40+.',

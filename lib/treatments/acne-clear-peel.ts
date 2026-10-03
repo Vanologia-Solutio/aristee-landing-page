@@ -9,6 +9,7 @@ export const acneClearPeelTreatment: Treatment = {
   tags: ['Clear', 'Renew', 'Refine'],
 
   heroImage: '/images/treatments/acne-clear-peel/hero.png',
+  flyerImage: '/images/treatments/acne-clear-peel/flyer.png',
 
   shortDescription:
     'Chemical peeling untuk membantu mengatasi komedo, jerawat, dan meratakan tekstur kulit.',

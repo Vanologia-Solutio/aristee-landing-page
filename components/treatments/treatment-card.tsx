@@ -3,7 +3,7 @@ import { formatPrice } from '@/lib/utils'
 import { ArrowUpRight, Clock } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { TagLine } from './ornaments'
+import { Sparkle, TagLine } from './ornaments'
 
 export default function TreatmentCard({
   treatment,
@@ -32,6 +32,12 @@ export default function TreatmentCard({
           <Clock className='size-3.5 text-accent' />
           {treatment.durationMinutes} menit
         </span>
+        {treatment.isBestSeller && (
+          <span className='absolute top-3 right-3 inline-flex items-center gap-1 rounded-full bg-linear-to-r from-gold to-[#d9b88a] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-white shadow-lg shadow-gold/40'>
+            <Sparkle className='size-2.5' />
+            Best Seller
+          </span>
+        )}
         <span className='absolute bottom-3 right-3 rounded-full bg-accent px-3.5 py-1 text-xs font-semibold tracking-wide text-accent-foreground shadow-lg shadow-accent/30'>
           {treatment.price ? formatPrice(treatment.price) : 'Hubungi Kami'}
         </span>

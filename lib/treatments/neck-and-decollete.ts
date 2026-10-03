@@ -9,6 +9,7 @@ export const neckAndDecolleteTreatment: Treatment = {
   tags: ['Hydrate', 'Revive', 'Renew'],
 
   heroImage: '/images/treatments/neck-and-decollete/hero.png',
+  flyerImage: '/images/treatments/neck-and-decollete/flyer.png',
 
   shortDescription:
     'Perawatan khusus leher dan kulit dada atas untuk melembapkan, menutrisi dan menyegarkan kulit.',

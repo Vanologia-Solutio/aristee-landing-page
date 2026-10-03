@@ -9,6 +9,7 @@ export const japaneseMochiTreatment: Treatment = {
   tags: ['Brighten', 'Hydrate', 'Glow'],
 
   heroImage: '/images/treatments/japanese-mochi/hero.png',
+  flyerImage: '/images/treatments/japanese-mochi/flyer.png',
 
   shortDescription:
     'Kombinasi Vitamin C dan Niacinamide untuk kulit cerah, rata dan bercahaya seperti mochi.',

@@ -5,6 +5,7 @@ import altHeroBackground from '@/assets/images/alt-bg-hero.webp'
 import { BUSINESS_NAME } from '@/lib/constants'
 import { Calendar, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Button } from '../ui/button'
 import { AccentLabel } from '../ui/label'
 import { FadeInItem, FadeInStagger } from '../ui/motion'
@@ -53,14 +54,16 @@ export default function Hero() {
             Reservasi Sekarang
             <Calendar />
           </Button>
-          <Button
-            size='xl'
-            variant='accent-outline'
-            className='w-full sm:w-auto'
-          >
-            Lihat Perawatan
-            <ChevronRight />
-          </Button>
+          <Link href='/perawatan' className='w-full sm:w-auto'>
+            <Button
+              size='xl'
+              variant='accent-outline'
+              className='w-full sm:w-auto'
+            >
+              Lihat Perawatan
+              <ChevronRight />
+            </Button>
+          </Link>
         </FadeInItem>
       </FadeInStagger>
     </section>

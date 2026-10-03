@@ -31,7 +31,7 @@ const VARIANTS = {
   hero: [
     {
       image: leaf1,
-      className: '-top-6 -right-10 w-44 rotate-45 opacity-30 md:w-64',
+      className: '-top-6 -right-10 w-44 -rotate-45 opacity-30 md:w-64',
     },
     {
       image: leaf4,

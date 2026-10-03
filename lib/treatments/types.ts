@@ -18,6 +18,8 @@ export interface Treatment {
   // Path relative to /public, e.g. '/images/treatments/{slug}/hero.png'
   heroImage: string
   gallery?: string[]
+  // Flyer katalog untuk diunduh, e.g. '/images/treatments/{slug}/flyer.png'
+  flyerImage?: string
 
   shortDescription: string
   description: string
@@ -25,6 +27,9 @@ export interface Treatment {
   durationMinutes: number
   // Harga dalam Rupiah; kosong jika belum tercantum di katalog
   price?: number
+
+  // Set `isBestSeller: true` di file treatment untuk menampilkan badge Best Seller
+  isBestSeller?: boolean
 
   sections: TreatmentSection[]
 }

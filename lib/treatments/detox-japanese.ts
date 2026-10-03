@@ -9,6 +9,7 @@ export const detoxJapaneseTreatment: Treatment = {
   tags: ['Cleanse', 'Reset', 'Protect'],
 
   heroImage: '/images/treatments/detox-japanese/hero.png',
+  flyerImage: '/images/treatments/detox-japanese/flyer.png',
 
   shortDescription:
     'Detoks mendalam untuk membersihkan pori dari kotoran, minyak berlebih dan racun akibat polusi.',
@@ -17,6 +18,7 @@ export const detoxJapaneseTreatment: Treatment = {
 
   durationMinutes: 50,
   price: 120000,
+  isBestSeller: true,
 
   sections: [
     {

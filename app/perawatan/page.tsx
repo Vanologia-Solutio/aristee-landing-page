@@ -8,7 +8,6 @@ import { TREATMENTS, type Treatment } from '@/lib/treatments'
 import { cn, formatPrice } from '@/lib/utils'
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: `Semua Perawatan | ${BUSINESS_NAME}`,
@@ -68,7 +67,7 @@ export default function TreatmentsPage() {
                 sehat, cerah, dan percaya diri.
               </p>
             </FadeInItem>
-            <FadeInItem className='grid max-w-lg grid-cols-3 divide-x divide-gold/30 rounded-3xl bg-background/70 py-4 ring-1 ring-border backdrop-blur-sm'>
+            <FadeInItem className='grid max-w-lg grid-cols-3 items-center divide-x divide-gold/30 rounded-3xl bg-background/70 py-4 ring-1 ring-border backdrop-blur-sm'>
               {stats.map(stat => (
                 <div key={stat.label} className='px-3 text-center sm:px-5'>
                   <p className='font-heading text-xl font-medium text-primary sm:text-2xl'>
@@ -109,27 +108,6 @@ export default function TreatmentsPage() {
           </FadeIn>
         </div>
       </section>
-
-      {/* Series navigation */}
-      <nav
-        aria-label='Series perawatan'
-        className='relative z-10 mx-auto -mt-8 w-full max-w-6xl px-4'
-      >
-        <FadeIn className='flex gap-1 overflow-x-auto rounded-full bg-background p-2 lg:flex-wrap lg:justify-center lg:rounded-[2rem] shadow-[0_20px_40px_-24px_rgb(244_83_138/0.45)] ring-1 ring-border scrollbar-none'>
-          {groups.map(([category, treatments]) => (
-            <Link
-              key={category}
-              href={`#${toAnchor(category)}`}
-              className='flex shrink-0 items-center gap-2 rounded-full px-3.5 py-2.5 text-sm font-medium text-primary transition-colors hover:bg-accent hover:text-accent-foreground'
-            >
-              {category}
-              <span className='flex size-5 items-center justify-center rounded-full bg-blush-strong text-[10px] text-accent'>
-                {treatments.length}
-              </span>
-            </Link>
-          ))}
-        </FadeIn>
-      </nav>
 
       {/* Series */}
       {groups.map(([category, treatments], index) => (

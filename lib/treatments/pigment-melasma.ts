@@ -9,6 +9,7 @@ export const pigmentMelasmaTreatment: Treatment = {
   tags: ['Calm', 'Repair', 'Correct', 'Maintain'],
 
   heroImage: '/images/treatments/pigment-melasma/hero.png',
+  flyerImage: '/images/treatments/pigment-melasma/flyer.png',
 
   shortDescription:
     'Perawatan intensif namun gentle untuk melasma dan hiperpigmentasi yang persisten.',

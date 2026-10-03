@@ -9,6 +9,7 @@ export const eyeRenewalTreatment: Treatment = {
   tags: ['Refresh', 'Soothe', 'Brighten'],
 
   heroImage: '/images/treatments/eye-renewal/hero.png',
+  flyerImage: '/images/treatments/eye-renewal/flyer.png',
 
   shortDescription:
     'Perawatan khusus area mata untuk mengurangi tampilan mata lelah dan menjaga kulit tetap awet muda.',

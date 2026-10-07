@@ -1,4 +1,5 @@
 import BotanicalBackground from '@/components/general/botanical-background'
+import ImageViewerButton from '@/components/general/image-viewer-button'
 import {
   Eyebrow,
   Flourish,
@@ -13,7 +14,7 @@ import { FadeIn, FadeInItem, FadeInStagger } from '@/components/ui/motion'
 import { BUSINESS_NAME, WHATSAPP_URL } from '@/lib/constants'
 import { getTreatmentBySlug, TREATMENTS } from '@/lib/treatments'
 import { formatPrice } from '@/lib/utils'
-import { ArrowRight, Check, Clock, Download } from 'lucide-react'
+import { ArrowRight, Check, Clock, Eye } from 'lucide-react'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -110,19 +111,17 @@ export default async function TreatmentDetailPage(
               </FadeInItem>
               {treatment.flyerImage && (
                 <FadeInItem>
-                  <a
-                    href={treatment.flyerImage}
-                    download={`${BUSINESS_NAME} - ${treatment.name}.png`}
+                  <ImageViewerButton
+                    src={treatment.flyerImage}
+                    title={`${BUSINESS_NAME} - ${treatment.name}`}
+                    subtitle='Flyer Perawatan'
+                    size='sm'
+                    variant='link'
+                    className='p-0 text-accent'
                   >
-                    <Button
-                      size='sm'
-                      variant='link'
-                      className='group p-0 text-accent'
-                    >
-                      <Download />
-                      Unduh Flyer
-                    </Button>
-                  </a>
+                    <Eye />
+                    Lihat/Unduh Flyer
+                  </ImageViewerButton>
                 </FadeInItem>
               )}
             </FadeInStagger>

@@ -1,4 +1,5 @@
 import BotanicalBackground from '@/components/general/botanical-background'
+import ImageViewerButton from '@/components/general/image-viewer-button'
 import CTA from '@/components/landing/cta'
 import { Eyebrow, Flourish, Sparkle } from '@/components/treatments/ornaments'
 import TreatmentCard from '@/components/treatments/treatment-card'
@@ -6,13 +7,14 @@ import { FadeIn, FadeInItem, FadeInStagger } from '@/components/ui/motion'
 import { BUSINESS_NAME } from '@/lib/constants'
 import { TREATMENTS, type Treatment } from '@/lib/treatments'
 import { cn, formatPrice } from '@/lib/utils'
+import { FileText } from 'lucide-react'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: `Semua Perawatan | ${BUSINESS_NAME}`,
   description:
-    'Katalog lengkap perawatan kulit di Aristée Beauty Clinic: facial, acne, pigmentasi, rejuvenation, dan perawatan area khusus.',
+    'Katalog lengkap perawatan kulit di Klinik Kecantikan Aristée: facial, acne, pigmentasi, rejuvenation, dan perawatan area khusus.',
 }
 
 function groupByCategory(treatments: Treatment[]) {
@@ -58,7 +60,7 @@ export default function TreatmentsPage() {
               </h1>
             </FadeInItem>
             <FadeInItem>
-              <Flourish className='w-48' />
+              <Flourish className='w-fit' />
             </FadeInItem>
             <FadeInItem>
               <p className='max-w-lg text-base text-muted-foreground leading-relaxed md:text-lg'>
@@ -66,6 +68,19 @@ export default function TreatmentsPage() {
                 dirancang oleh dokter untuk membantu Anda mendapatkan kulit
                 sehat, cerah, dan percaya diri.
               </p>
+            </FadeInItem>
+            <FadeInItem>
+              <ImageViewerButton
+                src='/menu-and-price-list.png'
+                title={`${BUSINESS_NAME} - Daftar Menu & Price List`}
+                subtitle='Daftar Menu & Price List'
+                size='xl'
+                variant='accent'
+                className='h-auto min-h-12 w-full whitespace-normal px-7 py-3 sm:w-auto'
+              >
+                <FileText />
+                Lihat/Unduh Daftar Menu & Price List
+              </ImageViewerButton>
             </FadeInItem>
             <FadeInItem className='grid max-w-lg grid-cols-3 items-center divide-x divide-gold/30 rounded-3xl bg-background/70 py-4 ring-1 ring-border backdrop-blur-sm'>
               {stats.map(stat => (

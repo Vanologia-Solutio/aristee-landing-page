@@ -2,31 +2,31 @@
 
 import leaf1 from '@/assets/images/leaf-1.webp'
 import leaf2 from '@/assets/images/leaf-2.webp'
-import { Cpu, FlaskConical, Stethoscope, Target } from 'lucide-react'
+import { FlaskConical, ShieldCheck, Stethoscope, Target } from 'lucide-react'
 import Image from 'next/image'
 import { FadeInItem, FadeInStagger } from '../ui/motion'
 
 const SELLING_POINTS = [
   {
-    id: 'dokter-terapis-berpengalaman',
-    title: 'Dokter & Terapis Berpengalaman',
+    id: 'dokter-terapis-profesional',
+    title: 'Dokter & Terapis Profesional',
     desc: 'Ditangani oleh tenaga ahli di bidangnya',
     icon: Stethoscope,
   },
   {
-    id: 'teknologi-modern-aman',
-    title: 'Teknologi Modern & Aman',
-    desc: 'Peralatan canggih dengan standar klinis tinggi',
-    icon: Cpu,
+    id: 'perawatan-aman-higienis',
+    title: 'Perawatan Aman & Higienis',
+    desc: 'Prosedur steril dengan standar klinis tinggi',
+    icon: ShieldCheck,
   },
   {
-    id: 'produk-medis-berkualitas',
-    title: 'Produk Medis Berkualitas',
+    id: 'produk-medis-bpom',
+    title: 'Produk Medis Berkualitas & Terdaftar BPOM',
     desc: 'Hanya produk terpilih yang aman dan efektif',
     icon: FlaskConical,
   },
   {
-    id: 'konsultasi-dokter',
+    id: 'hasil-optimal-terukur',
     title: 'Hasil Optimal & Terukur',
     desc: 'Perawatan efektif dengan hasil yang nyata',
     icon: Target,
@@ -59,7 +59,7 @@ export default function USP() {
         {SELLING_POINTS.map((point, index) => (
           <FadeInItem
             key={index}
-            className='flex flex-col text-center items-center justify-center gap-2.5 px-4 md:px-12'
+            className='flex flex-col text-center items-center justify-center gap-2.5 px-4 md:px-6'
           >
             <point.icon className='text-accent size-9' />
             <h3 className='font-medium text-xl text-background'>

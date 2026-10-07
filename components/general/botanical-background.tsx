@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils'
 import type { StaticImageData } from 'next/image'
 
 /** Line-art leaf recolored with the accent color via CSS mask. */
-function Leaf({
+export function Leaf({
   image,
   className,
 }: {

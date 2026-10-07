@@ -1,3 +1,4 @@
+import About from '@/components/landing/about'
 import CTA from '@/components/landing/cta'
 import Gallery from '@/components/landing/gallery'
 import Hero from '@/components/landing/hero'
@@ -14,6 +15,7 @@ export default function Home() {
       <Treatments />
       <USP />
       <Gallery />
+      <About />
       <Operational />
       <CTA />
     </main>

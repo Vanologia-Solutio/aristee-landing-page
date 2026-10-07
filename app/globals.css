@@ -10,6 +10,8 @@
   --color-foreground: var(--foreground);
   --color-blush: var(--blush);
   --color-gold: var(--gold);
+  --color-beige: var(--beige);
+  --color-beige-strong: var(--beige-strong);
   --color-blush-strong: var(--blush-strong);
   --font-sans: var(--font-sans);
   --font-heading: var(--font-heading);
@@ -74,6 +76,8 @@
   --blush: #fff4f7;
   --blush-strong: #fde4ec;
   --gold: #c8a781;
+  --beige: #f8f1e7;
+  --beige-strong: #efe2cf;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);

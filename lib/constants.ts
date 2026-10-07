@@ -1,5 +1,5 @@
 export const BUSINESS_NAME = 'Klinik Kecantikan Aristée'
-export const WHATSAPP_NUMBER = '6281234567890'
+export const WHATSAPP_NUMBER = '628212036489'
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`
 export const SUPPORT_EMAIL = 'info@aristee.com'
 export const MAP_EMBED_URL =

@@ -7,9 +7,8 @@ import treatmentRoom from '@/assets/images/treatment-room.webp'
 import waitingRoom from '@/assets/images/waiting-room.webp'
 import wastafel from '@/assets/images/wastafel.webp'
 import { BUSINESS_NAME } from '@/lib/constants'
-import { ArrowRight, CheckCircle } from 'lucide-react'
+import { CheckCircle } from 'lucide-react'
 import Image from 'next/image'
-import { Button } from '../ui/button'
 import { AccentLabel } from '../ui/label'
 import { FadeIn, FadeInItem, FadeInStagger } from '../ui/motion'
 
@@ -23,7 +22,7 @@ export default function Gallery() {
   return (
     <section id='galeri' className='py-16 md:py-24 bg-white'>
       <div className='mx-auto max-w-6xl px-4 grid grid-cols-1 items-center justify-center gap-8 md:grid-cols-5 md:gap-12'>
-        <FadeIn className='col-span-1 space-y-4 mb-8 md:col-span-2'>
+        <FadeIn className='col-span-1 space-y-4 md:col-span-2'>
           <AccentLabel>Galeri Kami</AccentLabel>
           <h2 className='font-heading font-medium text-3xl md:text-4xl leading-tight'>
             Kenyamanan di
@@ -44,10 +43,6 @@ export default function Gallery() {
               </li>
             ))}
           </ul>
-          <Button size='xl' variant='accent'>
-            Selengkapnya Tentang Kami
-            <ArrowRight />
-          </Button>
         </FadeIn>
         <FadeInStagger className='col-span-1 space-y-4 md:col-span-3'>
           <div className='grid grid-cols-2 gap-3 md:grid-cols-5 md:gap-4'>

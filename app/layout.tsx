@@ -14,9 +14,9 @@ const loraHeading = Lora({
 const outfit = Outfit({ subsets: ['latin'], variable: '--font-sans' })
 
 export const metadata: Metadata = {
-  title: 'Aristée Beauty Clinic | Healthy Skin, Confident You',
+  title: 'Klinik Kecantikan Aristée | Healthy Skin, Confident You',
   description:
-    'Aristée Beauty Clinic is a trusted beauty clinic that provides safe, comfortable, and effective skin care treatments with professional doctors. We are committed to helping you achieve healthy skin and boost your confidence.',
+    'Klinik Kecantikan Aristée adalah klinik kecantikan yang menyediakan perawatan kulit yang aman, nyaman, dan efektif dengan dokter profesional. Kami berkomitmen untuk membantu Anda mencapai kulit sehat dan meningkatkan kepercayaan diri Anda.',
 }
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {

@@ -16,9 +16,9 @@ import { Button } from '../ui/button'
 
 const NAV_LINKS = [
   { label: 'Beranda', href: '/#beranda' },
-  { label: 'Tentang Kami', href: '/#perjalanan' },
   { label: 'Perawatan', href: '/#perawatan' },
   { label: 'Galeri', href: '/#galeri' },
+  { label: 'Tentang Kami', href: '/#tentang-kami' },
   { label: 'Kontak', href: '/#operasional' },
 ] as const
 
@@ -58,7 +58,7 @@ export default function Navbar() {
             <Link href='/'>
               <Image
                 src={logo}
-                alt="Arist'ee Beauty Clinic"
+                alt='Klinik Kecantikan Aristée'
                 width={120}
                 height={32}
                 priority

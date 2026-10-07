@@ -41,7 +41,7 @@ export default function Footer() {
         <FadeInItem className='col-span-2 space-y-5 md:col-span-4'>
           <Image
             src={logo}
-            alt="Arist'ee Beauty Clinic"
+            alt='Klinik Kecantikan Aristée'
             width={120}
             height={32}
             priority
@@ -120,7 +120,7 @@ export default function Footer() {
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                +62 812-345-6789
+                +62 821-2036-489
               </Link>
             </li>
             <li className='flex gap-1.5'>

@@ -59,7 +59,7 @@ export function ViewerShell({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.25 }}
-          className='fixed inset-0 z-110 flex flex-col bg-primary/90 backdrop-blur-md'
+          className='fixed inset-0 z-110 flex flex-col bg-black/60 backdrop-blur-md'
         >
           <div className='absolute inset-0' onClick={onClose} />
 

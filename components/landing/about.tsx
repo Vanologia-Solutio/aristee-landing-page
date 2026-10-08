@@ -65,10 +65,10 @@ export default function About() {
           </FadeInItem>
           <FadeInItem>
             <p className='text-muted-foreground leading-relaxed'>
-              {BUSINESS_NAME} hadir untuk mendampingi perjalanan Anda dalam
-              merawat dan menjaga kesehatan kulit—di bawah supervisi dokter,
-              berlandaskan ilmu medis dan pendekatan yang tepat untuk kebutuhan
-              setiap kulit.
+              <strong>{BUSINESS_NAME}</strong> hadir untuk mendampingi
+              perjalanan Anda dalam merawat dan menjaga kesehatan kulit—di bawah
+              supervisi dokter, berlandaskan ilmu medis dan pendekatan yang
+              tepat untuk kebutuhan setiap kulit.
             </p>
           </FadeInItem>
           <FadeInItem>

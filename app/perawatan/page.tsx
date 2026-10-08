@@ -13,8 +13,7 @@ import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: `Semua Perawatan | ${BUSINESS_NAME}`,
-  description:
-    'Katalog lengkap perawatan kulit di Klinik Kecantikan Aristée: facial, acne, pigmentasi, rejuvenation, dan perawatan area khusus.',
+  description: `Katalog lengkap perawatan kulit di ${BUSINESS_NAME}: facial, acne, pigmentasi, rejuvenation, dan perawatan area khusus.`,
 }
 
 function groupByCategory(treatments: Treatment[]) {

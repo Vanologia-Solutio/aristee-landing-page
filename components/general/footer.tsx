@@ -5,15 +5,19 @@ import leaf5 from '@/assets/images/leaf-5.webp'
 import logo from '@/assets/images/logo-white.webp'
 import {
   BUSINESS_NAME,
+  FACEBOOK_URL,
+  INSTAGRAM_URL,
+  LINKTREE_URL,
   MAP_DIRECTIONS_URL,
   SUPPORT_EMAIL,
   WHATSAPP_URL,
 } from '@/lib/constants'
-import { Contact, Mail, MapPin, Phone } from 'lucide-react'
+import { Mail, MapPin, Phone } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '../ui/button'
 import { FadeInItem, FadeInStagger } from '../ui/motion'
+import { FacebookIcon, InstagramIcon, LinktreeIcon } from './social-icons'
 
 export default function Footer() {
   return (
@@ -41,7 +45,7 @@ export default function Footer() {
         <FadeInItem className='col-span-2 space-y-5 md:col-span-4'>
           <Image
             src={logo}
-            alt='Klinik Kecantikan Aristée'
+            alt={BUSINESS_NAME}
             width={120}
             height={32}
             priority
@@ -52,15 +56,28 @@ export default function Footer() {
             yang aman, nyaman, dan berkualitas.
           </p>
           <div className='flex items-center gap-2'>
-            <Button size='icon' variant='outline'>
-              <Contact />
-            </Button>
-            <Button size='icon' variant='outline'>
-              <Contact />
-            </Button>
-            <Button size='icon' variant='outline'>
-              <Contact />
-            </Button>
+            {[
+              { label: 'Instagram', href: INSTAGRAM_URL, Icon: InstagramIcon },
+              { label: 'Facebook', href: FACEBOOK_URL, Icon: FacebookIcon },
+              { label: 'Linktree', href: LINKTREE_URL, Icon: LinktreeIcon },
+            ].map(({ label, href, Icon }) => (
+              <Button
+                key={label}
+                size='icon'
+                variant='accent-outline'
+                nativeButton={false}
+                render={
+                  <Link
+                    href={href}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    aria-label={label}
+                  />
+                }
+              >
+                <Icon />
+              </Button>
+            ))}
           </div>
         </FadeInItem>
         <FadeInItem className='col-span-1 md:col-span-2'>
@@ -79,10 +96,7 @@ export default function Footer() {
               <Link href='/#galeri'>Galeri</Link>
             </li>
             <li>
-              <Link href='/#operasional'>Operasional</Link>
-            </li>
-            <li>
-              <Link href='/#cta'>Kontak</Link>
+              <Link href='/#operasional'>Kontak</Link>
             </li>
           </ul>
         </FadeInItem>

@@ -30,10 +30,10 @@ export default function Gallery() {
             <span className='text-accent'>Setiap Ruang</span>
           </h2>
           <p className='text-muted-foreground leading-relaxed'>
-            {BUSINESS_NAME} hadir untuk memberikan pengalaman perawatan kulit
-            yang aman, nyaman, dan berkualitas dengan sentuhan personal. Kami
-            percaya setiap kulit itu unik dan berhak mendapatkan perawatan
-            terbaik.
+            <strong>{BUSINESS_NAME}</strong> hadir untuk memberikan pengalaman
+            perawatan kulit yang aman, nyaman, dan berkualitas dengan sentuhan
+            personal. Kami percaya setiap kulit itu unik dan berhak mendapatkan
+            perawatan terbaik.
           </p>
           <ul className='space-y-2.5 mt-6 mb-8'>
             {CHECKLISTS.map((item, index) => (

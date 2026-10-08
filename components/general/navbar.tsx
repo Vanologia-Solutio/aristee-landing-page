@@ -1,6 +1,7 @@
 'use client'
 
 import logo from '@/assets/images/logo-ori.webp'
+import { BUSINESS_NAME } from '@/lib/constants'
 import { cn } from '@/lib/utils'
 import { Menu, Phone, X } from 'lucide-react'
 import {
@@ -58,7 +59,7 @@ export default function Navbar() {
             <Link href='/'>
               <Image
                 src={logo}
-                alt='Klinik Kecantikan Aristée'
+                alt={BUSINESS_NAME}
                 width={120}
                 height={32}
                 priority

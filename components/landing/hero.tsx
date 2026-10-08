@@ -1,6 +1,6 @@
 'use client'
 
-import altHeroBackground from '@/assets/images/alt-bg-hero.webp'
+import recepsionist from '@/assets/images/recepsionist.webp'
 import heroBackground from '@/assets/images/bg-hero.webp'
 import leaf1 from '@/assets/images/leaf-1.webp'
 import leaf5 from '@/assets/images/leaf-5.webp'
@@ -29,7 +29,7 @@ export default function Hero() {
       </div>
       <div className='absolute inset-0 top-1/2 block sm:hidden'>
         <Image
-          src={altHeroBackground}
+          src={recepsionist}
           alt={BUSINESS_NAME}
           fill
           className='object-cover object-center grayscale-20'

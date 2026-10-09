@@ -45,8 +45,13 @@ export default function TreatmentsPage() {
   return (
     <main id='katalog-perawatan' className='flex-1 flex flex-col'>
       {/* Hero */}
-      <section className='relative overflow-hidden bg-blush pt-28 pb-20 sm:pt-36 md:pb-28'>
+      <section className='relative overflow-hidden bg-blush pt-15 pb-20 sm:pt-16 md:pb-28'>
         <BotanicalBackground variant='hero' />
+        <FadeIn className='relative mx-auto mb-8 max-w-6xl px-4 sm:mb-10'>
+          <p className='font-heading text-lg italic text-primary sm:text-xl'>
+            by dr. Linda
+          </p>
+        </FadeIn>
         <div className='relative mx-auto grid max-w-6xl items-center gap-14 px-4 md:grid-cols-[1.1fr_1fr]'>
           <FadeInStagger className='space-y-7'>
             <FadeInItem>

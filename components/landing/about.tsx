@@ -52,7 +52,7 @@ export default function About() {
 
         <FadeInStagger className='space-y-5 text-center md:text-left'>
           <FadeInItem>
-            <Eyebrow className='justify-center md:justify-start'>
+            <Eyebrow className='justify-center md:justify-start' center>
               Tentang Kami
             </Eyebrow>
           </FadeInItem>

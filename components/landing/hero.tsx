@@ -17,7 +17,7 @@ export default function Hero() {
   return (
     <section
       id='beranda'
-      className='relative overflow-hidden pt-15 pb-24 sm:pt-16 sm:pb-32'
+      className='relative overflow-hidden pt-14 pb-24 sm:pb-32'
     >
       <div className='absolute inset-0 hidden sm:block'>
         <Image
@@ -50,20 +50,20 @@ export default function Hero() {
         />
       </div>
       <FadeInStagger className='relative mx-auto max-w-6xl px-4 z-10'>
-        <FadeInItem className='mb-8 sm:mb-10'>
+        <FadeInItem className='mb-12 sm:mb-16 pl-8.5'>
           <p className='font-heading text-lg italic text-primary sm:text-xl'>
             by dr. Linda
           </p>
         </FadeInItem>
         <div className='space-y-6 mb-10'>
           <FadeInItem>
-            <Eyebrow>Klinik Kecantikan Aristée</Eyebrow>
+            <Eyebrow className='text-xs'>Klinik Kecantikan Aristée</Eyebrow>
           </FadeInItem>
           <FadeInItem>
             <h1 className='max-w-full sm:max-w-md font-medium font-heading text-4xl leading-tight tracking-tight sm:text-6xl'>
               Perawatan Kulit yang{' '}
-              <em className='font-normal text-accent'>Nyaman</em>,{' '}
-              <em className='font-normal text-accent'>Personal</em>, dan{' '}
+              <em className='font-normal text-accent'>Nyaman,</em>{' '}
+              <em className='font-normal text-accent'>Personal,</em> dan{' '}
               <em className='font-normal text-accent'>
                 Terarah Bersama Dokter
               </em>

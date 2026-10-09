@@ -45,9 +45,9 @@ export default function TreatmentsPage() {
   return (
     <main id='katalog-perawatan' className='flex-1 flex flex-col'>
       {/* Hero */}
-      <section className='relative overflow-hidden bg-blush pt-15 pb-20 sm:pt-16 md:pb-28'>
+      <section className='relative overflow-hidden bg-blush pt-14 pb-20 md:pb-28'>
         <BotanicalBackground variant='hero' />
-        <FadeIn className='relative mx-auto mb-8 max-w-6xl px-4 sm:mb-10'>
+        <FadeIn className='relative mx-auto mb-12 max-w-6xl pr-4 pl-12.5 sm:mb-16'>
           <p className='font-heading text-lg italic text-primary sm:text-xl'>
             by dr. Linda
           </p>
@@ -55,7 +55,7 @@ export default function TreatmentsPage() {
         <div className='relative mx-auto grid max-w-6xl items-center gap-14 px-4 md:grid-cols-[1.1fr_1fr]'>
           <FadeInStagger className='space-y-7'>
             <FadeInItem>
-              <Eyebrow>Katalog Perawatan</Eyebrow>
+              <Eyebrow className='text-xs'>Katalog Perawatan</Eyebrow>
             </FadeInItem>
             <FadeInItem>
               <h1 className='font-heading text-4xl font-medium leading-[1.1] sm:text-6xl'>

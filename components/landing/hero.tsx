@@ -1,9 +1,9 @@
 'use client'
 
-import recepsionist from '@/assets/images/recepsionist.webp'
 import heroBackground from '@/assets/images/bg-hero.webp'
 import leaf1 from '@/assets/images/leaf-1.webp'
 import leaf5 from '@/assets/images/leaf-5.webp'
+import recepsionist from '@/assets/images/recepsionist.webp'
 import { BUSINESS_NAME, WHATSAPP_NUMBER } from '@/lib/constants'
 import { Calendar, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
@@ -52,14 +52,19 @@ export default function Hero() {
       <FadeInStagger className='relative mx-auto max-w-6xl px-4 z-10'>
         <div className='space-y-6 mb-10'>
           <FadeInItem>
-            <Eyebrow>{BUSINESS_NAME}</Eyebrow>
+            <Eyebrow>
+              Klinik Kecantikan Aristée <br className='block sm:hidden' />
+              by dr. Linda
+            </Eyebrow>
           </FadeInItem>
           <FadeInItem>
             <h1 className='max-w-full sm:max-w-md font-medium font-heading text-4xl leading-tight tracking-tight sm:text-6xl'>
               Perawatan Kulit yang{' '}
               <em className='font-normal text-accent'>Nyaman</em>,{' '}
               <em className='font-normal text-accent'>Personal</em>, dan{' '}
-              <em className='font-normal text-accent'>Terpercaya</em>
+              <em className='font-normal text-accent'>
+                Terarah Bersama Dokter
+              </em>
             </h1>
           </FadeInItem>
           <FadeInItem>
@@ -67,8 +72,9 @@ export default function Hero() {
           </FadeInItem>
           <FadeInItem>
             <p className='max-w-full sm:max-w-md text-base text-muted-foreground leading-relaxed md:text-lg'>
-              Kami hadir untuk memberikan pengalaman perawatan kulit yang aman,
-              nyaman dan efektif bersama dokter profesional.
+              Hadir untuk memberikan pengalaman perawatan kulit yang nyaman dan
+              personal, dengan standar kebersihan yang baik serta pendampingan
+              dokter di setiap langkah perawatan.
             </p>
           </FadeInItem>
         </div>

@@ -2,7 +2,8 @@ export const BUSINESS_NAME = 'Klinik Kecantikan Aristée by dr. Linda'
 export const WHATSAPP_NUMBER = '628212036489'
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`
 // TODO: replace with the clinic's real social profile URLs
-export const INSTAGRAM_URL = 'https://www.instagram.com/'
+export const INSTAGRAM_URL =
+  'https://www.instagram.com/klinik_kecantikan_aristee'
 export const FACEBOOK_URL = 'https://www.facebook.com/'
 export const LINKTREE_URL = 'https://linktr.ee/'
 export const SUPPORT_EMAIL = 'info@aristee.com'

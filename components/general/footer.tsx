@@ -19,6 +19,12 @@ import { Button } from '../ui/button'
 import { FadeInItem, FadeInStagger } from '../ui/motion'
 import { FacebookIcon, InstagramIcon, LinktreeIcon } from './social-icons'
 
+const SOCIALS = [
+  { label: 'Instagram', href: INSTAGRAM_URL, Icon: InstagramIcon },
+  { label: 'Facebook', href: FACEBOOK_URL, Icon: FacebookIcon },
+  { label: 'Linktree', href: LINKTREE_URL, Icon: LinktreeIcon },
+]
+
 export default function Footer() {
   return (
     <footer className='relative bg-primary overflow-hidden'>
@@ -56,11 +62,7 @@ export default function Footer() {
             yang aman, nyaman, dan berkualitas.
           </p>
           <div className='flex items-center gap-2'>
-            {[
-              { label: 'Instagram', href: INSTAGRAM_URL, Icon: InstagramIcon },
-              { label: 'Facebook', href: FACEBOOK_URL, Icon: FacebookIcon },
-              { label: 'Linktree', href: LINKTREE_URL, Icon: LinktreeIcon },
-            ].map(({ label, href, Icon }) => (
+            {SOCIALS.map(({ label, href, Icon }) => (
               <Button
                 key={label}
                 size='icon'

@@ -56,7 +56,7 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Link href='/'>
+            <Link href='/' className='text-center'>
               <Image
                 src={logo}
                 alt={BUSINESS_NAME}
@@ -65,6 +65,9 @@ export default function Navbar() {
                 priority
                 className='shrink-0 object-contain transition-all duration-300 h-8 size-auto'
               />
+              <p className='text-xs text-primary font-heading font-semibold'>
+                by dr. Linda
+              </p>
             </Link>
           </motion.div>
           <div className='hidden md:flex items-center gap-6'>

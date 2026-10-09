@@ -42,8 +42,8 @@ export default function Operational() {
                 </h4>
                 <AccentLabel>{BUSINESS_NAME}</AccentLabel>
                 <p className='text-sm text-muted-foreground'>
-                  Jl. Ahmad Yani No.19, Pringsewu Utara, Kec. Pringsewu,
-                  Kabupaten Pringsewu, Lampung 35373
+                  Jl. Ahmad Yani No.19, Kec. Pringsewu, Kabupaten Pringsewu,
+                  Lampung 35373
                 </p>
               </div>
             </FadeInItem>

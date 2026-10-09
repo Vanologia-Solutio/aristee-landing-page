@@ -49,14 +49,19 @@ export default function Footer() {
 
       <FadeInStagger className='max-w-6xl px-4 mx-auto grid grid-cols-2 gap-x-6 gap-y-8 py-10 md:grid-cols-11 md:gap-12'>
         <FadeInItem className='col-span-2 space-y-5 md:col-span-4'>
-          <Image
-            src={logo}
-            alt={BUSINESS_NAME}
-            width={120}
-            height={32}
-            priority
-            className='shrink-0 object-contain transition-all duration-300 h-8 size-auto'
-          />
+          <div className='text-center w-fit'>
+            <Image
+              src={logo}
+              alt={BUSINESS_NAME}
+              width={120}
+              height={32}
+              priority
+              className='shrink-0 object-contain transition-all duration-300 h-8 size-auto'
+            />
+            <p className='text-xs text-background font-heading font-semibold'>
+              by dr. Linda
+            </p>
+          </div>
           <p className='text-sm text-background/65 leading-relaxed'>
             {BUSINESS_NAME} hadir untuk memberikan pengalaman perawatan kulit
             yang aman, nyaman, dan berkualitas.

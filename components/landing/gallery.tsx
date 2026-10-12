@@ -53,7 +53,7 @@ export default function Gallery() {
             >
               <Image
                 src={receptionist}
-                alt='Resepsionis'
+                alt={`Resepsionis ${BUSINESS_NAME}`}
                 fill
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                 priority
@@ -67,7 +67,7 @@ export default function Gallery() {
             >
               <Image
                 src={waitingRoom}
-                alt='Ruang Tunggu'
+                alt={`Ruang tunggu ${BUSINESS_NAME}`}
                 fill
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                 priority
@@ -83,7 +83,7 @@ export default function Gallery() {
             >
               <Image
                 src={consultationRoom}
-                alt='Ruang Konsultasi'
+                alt={`Ruang konsultasi dokter ${BUSINESS_NAME}`}
                 fill
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                 priority
@@ -97,7 +97,7 @@ export default function Gallery() {
             >
               <Image
                 src={treatmentRoom}
-                alt='Ruang Perawatan'
+                alt={`Ruang perawatan facial ${BUSINESS_NAME}`}
                 fill
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                 priority
@@ -111,7 +111,7 @@ export default function Gallery() {
             >
               <Image
                 src={medicineBox}
-                alt='Kotak Obat'
+                alt={`Produk perawatan kulit ${BUSINESS_NAME}`}
                 fill
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                 priority
@@ -125,7 +125,7 @@ export default function Gallery() {
             >
               <Image
                 src={wastafel}
-                alt='Wastafel'
+                alt={`Area wastafel ${BUSINESS_NAME}`}
                 fill
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                 priority

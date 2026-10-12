@@ -1,19 +1,54 @@
 import BotanicalBackground from '@/components/general/botanical-background'
 import ImageViewerButton from '@/components/general/image-viewer-button'
+import JsonLd from '@/components/general/json-ld'
 import CTA from '@/components/landing/cta'
 import { Eyebrow, Flourish, Sparkle } from '@/components/treatments/ornaments'
 import TreatmentCard from '@/components/treatments/treatment-card'
 import { FadeIn, FadeInItem, FadeInStagger } from '@/components/ui/motion'
 import { BUSINESS_NAME } from '@/lib/constants'
+import {
+  CITY,
+  REGION,
+  SHORT_NAME,
+  SITE_KEYWORDS,
+  treatmentListJsonLd,
+} from '@/lib/seo'
 import { TREATMENTS, type Treatment } from '@/lib/treatments'
 import { cn, formatPrice } from '@/lib/utils'
 import { FileText } from 'lucide-react'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 
+const PAGE_TITLE = `Daftar Perawatan & Harga Facial di ${CITY}`
+const PAGE_DESCRIPTION = `Katalog lengkap perawatan kulit dan harga di ${BUSINESS_NAME}, ${CITY}, ${REGION}: facial, perawatan jerawat, flek & melasma, peremajaan kulit, mata & leher, skin booster, hingga exosome.`
+
 export const metadata: Metadata = {
-  title: `Semua Perawatan | ${BUSINESS_NAME}`,
-  description: `Katalog lengkap perawatan kulit di ${BUSINESS_NAME}: facial, acne, pigmentasi, rejuvenation, dan perawatan area khusus.`,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  keywords: [
+    `daftar perawatan ${SHORT_NAME}`,
+    `harga facial ${CITY}`,
+    `harga perawatan wajah ${CITY}`,
+    `price list klinik kecantikan ${CITY}`,
+    ...TREATMENTS.map(treatment => treatment.name),
+    ...SITE_KEYWORDS,
+  ],
+  alternates: { canonical: '/perawatan' },
+  openGraph: {
+    type: 'website',
+    locale: 'id_ID',
+    url: '/perawatan',
+    siteName: BUSINESS_NAME,
+    title: `${PAGE_TITLE} | ${SHORT_NAME}`,
+    description: PAGE_DESCRIPTION,
+    images: ['/opengraph-image'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${PAGE_TITLE} | ${SHORT_NAME}`,
+    description: PAGE_DESCRIPTION,
+    images: ['/opengraph-image'],
+  },
 }
 
 function groupByCategory(treatments: Treatment[]) {
@@ -44,6 +79,7 @@ export default function TreatmentsPage() {
 
   return (
     <main id='katalog-perawatan' className='flex-1 flex flex-col'>
+      <JsonLd data={treatmentListJsonLd(TREATMENTS)} />
       {/* Hero */}
       <section className='relative overflow-hidden bg-blush pt-14 pb-20 md:pb-28'>
         <BotanicalBackground variant='hero' />

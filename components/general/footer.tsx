@@ -31,7 +31,8 @@ export default function Footer() {
       <div className='absolute z-10 -bottom-7 -left-7 opacity-15'>
         <Image
           src={leaf4}
-          alt='Leaf'
+          alt=''
+          aria-hidden
           width={184}
           height={184}
           className='object-cover object-center size-full'
@@ -40,7 +41,8 @@ export default function Footer() {
       <div className='absolute z-10 top-7 -right-12 -rotate-30 opacity-15'>
         <Image
           src={leaf5}
-          alt='Leaf'
+          alt=''
+          aria-hidden
           width={144}
           height={144}
           className='object-cover object-center size-full'

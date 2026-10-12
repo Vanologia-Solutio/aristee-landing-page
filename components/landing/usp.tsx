@@ -39,7 +39,8 @@ export default function USP() {
       <div className='absolute z-10 -bottom-14 -left-8 opacity-15'>
         <Image
           src={leaf2}
-          alt='Leaf'
+          alt=''
+          aria-hidden
           width={196}
           height={196}
           className='object-cover object-center'
@@ -48,7 +49,8 @@ export default function USP() {
       <div className='absolute z-10 top-4 -right-16 -rotate-28 opacity-15'>
         <Image
           src={leaf1}
-          alt='Leaf'
+          alt=''
+          aria-hidden
           width={184}
           height={184}
           className='object-cover object-center'

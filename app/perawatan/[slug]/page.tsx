@@ -1,5 +1,6 @@
 import BotanicalBackground from '@/components/general/botanical-background'
 import ImageViewerButton from '@/components/general/image-viewer-button'
+import JsonLd from '@/components/general/json-ld'
 import {
   Eyebrow,
   Flourish,
@@ -12,6 +13,13 @@ import TreatmentCard from '@/components/treatments/treatment-card'
 import { Button } from '@/components/ui/button'
 import { FadeIn, FadeInItem, FadeInStagger } from '@/components/ui/motion'
 import { BUSINESS_NAME, WHATSAPP_URL } from '@/lib/constants'
+import {
+  CITY,
+  REGION,
+  SHORT_NAME,
+  treatmentJsonLd,
+  treatmentKeywords,
+} from '@/lib/seo'
 import { getTreatmentBySlug, TREATMENTS } from '@/lib/treatments'
 import { formatPrice } from '@/lib/utils'
 import { ArrowRight, Check, Clock, Eye } from 'lucide-react'
@@ -33,9 +41,36 @@ export async function generateMetadata(
   const treatment = getTreatmentBySlug(slug)
   if (!treatment) return {}
 
+  const title = `${treatment.name} di ${CITY}`
+  const priceInfo = treatment.price
+    ? `, harga ${formatPrice(treatment.price)}`
+    : ''
+  const description = `${treatment.shortDescription} Durasi ${treatment.durationMinutes} menit${priceInfo} di ${SHORT_NAME}, ${CITY}, ${REGION}.`
+  const image = {
+    url: treatment.heroImage,
+    alt: `${treatment.name} di ${BUSINESS_NAME}`,
+  }
+
   return {
-    title: `${treatment.name} | ${BUSINESS_NAME}`,
-    description: treatment.shortDescription,
+    title,
+    description,
+    keywords: treatmentKeywords(treatment),
+    alternates: { canonical: `/perawatan/${treatment.slug}` },
+    openGraph: {
+      type: 'article',
+      locale: 'id_ID',
+      url: `/perawatan/${treatment.slug}`,
+      siteName: BUSINESS_NAME,
+      title: `${title} | ${SHORT_NAME}`,
+      description,
+      images: [image],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${title} | ${SHORT_NAME}`,
+      description,
+      images: [image],
+    },
   }
 }
 
@@ -63,6 +98,7 @@ export default async function TreatmentDetailPage(
 
   return (
     <main id='detail-perawatan' className='flex-1 flex flex-col'>
+      <JsonLd data={treatmentJsonLd(treatment)} />
       {/* Hero */}
       <section className='relative overflow-hidden bg-blush pt-28 pb-20 sm:pt-36 md:pb-28'>
         <BotanicalBackground variant='hero' />
@@ -134,7 +170,7 @@ export default async function TreatmentDetailPage(
               <div className='relative aspect-4/5 overflow-hidden rounded-t-full rounded-b-[2rem] shadow-[0_40px_80px_-40px_rgb(244_83_138/0.6)] ring-8 ring-background'>
                 <Image
                   src={treatment.heroImage}
-                  alt={treatment.name}
+                  alt={`${treatment.name} di ${BUSINESS_NAME}, ${CITY}`}
                   fill
                   priority
                   sizes='(max-width: 768px) 90vw, 450px'

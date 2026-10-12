@@ -22,7 +22,7 @@ export default function Hero() {
       <div className='absolute inset-0 hidden sm:block'>
         <Image
           src={heroBackground}
-          alt={BUSINESS_NAME}
+          alt={`${BUSINESS_NAME} - klinik kecantikan di Pringsewu, Lampung`}
           fill
           className='object-cover object-bottom-right grayscale-20'
         />
@@ -30,7 +30,7 @@ export default function Hero() {
       <div className='absolute inset-0 top-1/2 block sm:hidden'>
         <Image
           src={recepsionist}
-          alt={BUSINESS_NAME}
+          alt={`${BUSINESS_NAME} - klinik kecantikan di Pringsewu, Lampung`}
           fill
           className='object-cover object-center grayscale-20'
         />

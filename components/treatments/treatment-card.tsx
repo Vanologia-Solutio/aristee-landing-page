@@ -21,7 +21,7 @@ export default function TreatmentCard({
       <div className='relative aspect-4/3 w-full overflow-hidden rounded-[1.6rem]'>
         <Image
           src={treatment.heroImage}
-          alt={treatment.name}
+          alt={`${treatment.name} - ${treatment.category}`}
           fill
           sizes='(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw'
           priority={priority}

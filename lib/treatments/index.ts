@@ -1,6 +1,7 @@
 import { acneClearPeelTreatment } from './acne-clear-peel'
 import { collagenStimulatorTreatment } from './collagen-stimulator'
 import { detoxJapaneseTreatment } from './detox-japanese'
+import { exosomeSkinRegenerationTreatment } from './exosome-skin-regeneration'
 import { eyeRenewalTreatment } from './eye-renewal'
 import { japaneseMochiTreatment } from './japanese-mochi'
 import { matureSkinHydrationTreatment } from './mature-skin-hydration'
@@ -22,6 +23,7 @@ export const TREATMENTS: Treatment[] = [
   skinRenewalAndRadiantTreatment,
   pigmentMelasmaTreatment,
   collagenStimulatorTreatment,
+  exosomeSkinRegenerationTreatment,
   eyeRenewalTreatment,
   neckAndDecolleteTreatment,
 ]

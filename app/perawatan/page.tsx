@@ -83,7 +83,7 @@ export default function TreatmentsPage() {
                 className='h-auto min-h-12 w-full whitespace-normal px-7 py-3 sm:w-auto'
               >
                 <FileText />
-                Lihat/Unduh Daftar Menu & Price List
+                Lihat/Unduh Daftar Menu & Harga
               </ImageViewerButton>
             </FadeInItem>
             <FadeInItem className='grid max-w-lg grid-cols-3 items-center divide-x divide-gold/30 rounded-3xl bg-background/70 py-4 ring-1 ring-border backdrop-blur-sm'>

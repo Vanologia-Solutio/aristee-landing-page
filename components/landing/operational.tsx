@@ -57,9 +57,11 @@ export default function Operational() {
                   Jam Operasional
                 </h4>
                 <div>
-                  <h6 className='text-sm font-medium'>Setiap Hari</h6>
+                  <h6 className='text-sm font-medium'>
+                    Tanggal 1 &minus; 25 setiap bulan
+                  </h6>
                   <h4 className='font-medium text-accent text-xl'>
-                    10:00 &minus; 17:00
+                    09:00 &minus; 17:00 WIB
                   </h4>
                 </div>
               </div>

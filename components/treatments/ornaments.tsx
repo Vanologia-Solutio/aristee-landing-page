@@ -58,9 +58,9 @@ export function Eyebrow({
         className,
       )}
     >
-      <span className='h-px w-8 bg-gold/70' />
+      <span className='h-px w-6 sm:w-8 bg-gold/70' />
       {children}
-      {center && <span className='h-px w-8 bg-gold/70' />}
+      {center && <span className='h-px w-6 sm:w-8 bg-gold/70' />}
     </p>
   )
 }

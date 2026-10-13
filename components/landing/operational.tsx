@@ -54,16 +54,18 @@ export default function Operational() {
               </span>
               <div className='space-y-1.5'>
                 <h4 className='font-heading font-medium text-xl'>
-                  Jam Operasional
+                  Operasional
                 </h4>
-                <div>
-                  <h6 className='text-sm font-medium'>
-                    Tanggal 1 &minus; 25 setiap bulan
-                  </h6>
-                  <h4 className='font-medium text-accent text-xl'>
-                    09:00 &minus; 17:00 WIB
-                  </h4>
-                </div>
+                <dl className='grid grid-cols-[auto_1fr] gap-x-2 gap-y-1 text-sm font-medium'>
+                  <dt className='flex justify-between gap-2'>
+                    Tanggal <span aria-hidden='true'>:</span>
+                  </dt>
+                  <dd>01 sampai 25</dd>
+                  <dt className='flex justify-between gap-2'>
+                    Jam <span aria-hidden='true'>:</span>
+                  </dt>
+                  <dd>09.00 &minus; 17.00 WIB</dd>
+                </dl>
               </div>
             </FadeInItem>
             <FadeInItem className='grid grid-cols-1 gap-3 sm:grid-cols-2'>

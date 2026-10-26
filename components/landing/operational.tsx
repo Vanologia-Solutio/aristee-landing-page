@@ -64,7 +64,7 @@ export default function Operational() {
                   <dt className='flex justify-between gap-2'>
                     Jam <span aria-hidden='true'>:</span>
                   </dt>
-                  <dd>09.00 &minus; 17.00 WIB</dd>
+                  <dd>09.00 &minus; 20.00 WIB</dd>
                 </dl>
               </div>
             </FadeInItem>

@@ -1,7 +1,7 @@
 'use client'
 
 import ctaBackground from '@/assets/images/cta.webp'
-import { WHATSAPP_NUMBER, WHATSAPP_URL } from '@/lib/constants'
+import { WHATSAPP_URL } from '@/lib/constants'
 import { Calendar, MessageCircle } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -36,7 +36,7 @@ export default function CTA() {
           </p>
         </FadeInItem>
         <FadeInItem className='flex flex-col w-full gap-3 md:flex-row md:w-auto md:items-center'>
-          <Link href={`tel:${WHATSAPP_NUMBER}`}>
+          <Link href={WHATSAPP_URL} target='_blank' rel='noopener noreferrer'>
             <Button size='xl' className='w-full'>
               Reservasi Sekarang
               <Calendar />

@@ -4,7 +4,7 @@ import heroBackground from '@/assets/images/bg-hero.webp'
 import leaf1 from '@/assets/images/leaf-1.webp'
 import leaf5 from '@/assets/images/leaf-5.webp'
 import recepsionist from '@/assets/images/recepsionist.webp'
-import { BUSINESS_NAME, WHATSAPP_NUMBER } from '@/lib/constants'
+import { BUSINESS_NAME, WHATSAPP_URL } from '@/lib/constants'
 import { Calendar, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -81,7 +81,7 @@ export default function Hero() {
           </FadeInItem>
         </div>
         <FadeInItem className='flex flex-col items-stretch gap-3 sm:flex-row sm:items-center'>
-          <Link href={`tel:${WHATSAPP_NUMBER}`}>
+          <Link href={WHATSAPP_URL} target='_blank' rel='noopener noreferrer'>
             <Button size='xl' className='w-full sm:w-auto'>
               Reservasi Sekarang
               <Calendar />

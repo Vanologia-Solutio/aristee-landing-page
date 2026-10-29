@@ -1,5 +1,5 @@
 import BotanicalBackground from '@/components/general/botanical-background'
-import { BUSINESS_NAME, WHATSAPP_NUMBER, WHATSAPP_URL } from '@/lib/constants'
+import { BUSINESS_NAME, WHATSAPP_URL } from '@/lib/constants'
 import { ArrowRight, MessageCircle } from 'lucide-react'
 import Link from 'next/link'
 import { Button } from '../ui/button'
@@ -34,7 +34,7 @@ export default function ReservationBanner({
             sesuai dengan kondisi kulit Anda.
           </p>
           <div className='mt-2 flex w-full flex-col gap-3 sm:w-auto sm:flex-row'>
-            <Link href={`tel:${WHATSAPP_NUMBER}`}>
+            <Link href={WHATSAPP_URL} target='_blank' rel='noopener noreferrer'>
               <Button size='xl' className='w-full px-7'>
                 Reservasi Sekarang
                 <ArrowRight />
